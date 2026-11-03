@@ -1,0 +1,61 @@
+name: 복지 데이터 갱신
+
+on:
+  schedule:
+    - cron: '0 20 * * *' # 매일 05:00 (한국 시간)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      # 비밀값은 Settings → Secrets and variables → Actions → Secrets 에 등록
+      DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      # 선택 설정은 같은 화면의 Variables 탭 (비워 두면 기본값)
+      GEMINI_MODEL_PRIMARY: ${{ vars.GEMINI_MODEL_PRIMARY }}
+      GEMINI_MODEL_LITE: ${{ vars.GEMINI_MODEL_LITE }}
+      GEMINI_PRIMARY_RPM: ${{ vars.GEMINI_PRIMARY_RPM }}
+      GEMINI_LITE_RPM: ${{ vars.GEMINI_LITE_RPM }}
+      GEMINI_PRIMARY_MAX_CALLS: ${{ vars.GEMINI_PRIMARY_MAX_CALLS }}
+      GEMINI_LITE_MAX_CALLS: ${{ vars.GEMINI_LITE_MAX_CALLS }}
+      LIFE_ARRAY: ${{ vars.LIFE_ARRAY }}
+      LOCAL_DETAIL_CAP: ${{ vars.LOCAL_DETAIL_CAP }}
+      CENTRAL_DETAIL_CAP: ${{ vars.CENTRAL_DETAIL_CAP }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: 엔진 테스트
+        run: node --test tests/engine.test.mjs
+
+      - name: 1) 복지서비스 수집 (한국사회보장정보원 API)
+        run: node scripts/fetch.mjs
+
+      - name: 2) 자격요건 AI 분석 (Gemini 무료 티어)
+        run: node scripts/extract.mjs
+
+      - name: 3) 앱 데이터 생성
+        run: node scripts/build.mjs
+
+      - name: 변경 사항 커밋
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data-cache docs/data
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "data: 복지 데이터 갱신 $(TZ=Asia/Seoul date +'%Y-%m-%d %H:%M')"
+            git push
+          fi

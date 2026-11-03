@@ -1,0 +1,9 @@
+node_modules/
+.env
+.env.*
+*.local
+.DS_Store
+Thumbs.db
+# API 키는 절대 커밋하지 마세요. GitHub Secrets에 등록합니다.
+*.key
+secrets*.txt
