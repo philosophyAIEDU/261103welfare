@@ -2,7 +2,7 @@
  "WLF00000026": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "123981",
+   "inqNum": "124287",
    "intrsThemaArray": "생활지원,일자리,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인자립기반과",
@@ -18,7 +18,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000026",
@@ -120,7 +120,7 @@
  "WLF00003213": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "97375",
+   "inqNum": "97505",
    "intrsThemaArray": "신체건강,임신·출산",
    "jurMnofNm": "질병관리청",
    "jurOrgNm": "예방접종관리과",
@@ -135,7 +135,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003213",
@@ -225,7 +225,7 @@
  "WLF00001138": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "304140",
+   "inqNum": "304819",
    "intrsThemaArray": "생활지원,일자리",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "자활정책과",
@@ -241,7 +241,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001138",
@@ -335,7 +335,7 @@
  "WLF00005440": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "187391",
+   "inqNum": "188165",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "광역교통경제과",
@@ -351,7 +351,7 @@
    "svcfrstRegTs": "20240430",
    "trgterIndvdlArray": "다문화·탈북민,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00005440",
@@ -423,7 +423,7 @@
  "WLF00001101": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "17371",
+   "inqNum": "17456",
    "intrsThemaArray": "주거,안전·위기",
    "jurMnofNm": "성평등가족부",
    "jurOrgNm": "친밀관계폭력방지과",
@@ -439,7 +439,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001101",
@@ -513,7 +513,7 @@
  "WLF00003271": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "57084",
+   "inqNum": "57202",
    "intrsThemaArray": "주거,서민금융",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주택기금과",
@@ -529,7 +529,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "다자녀"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003271",
@@ -615,7 +615,7 @@
  "WLF00005567": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "1675628",
+   "inqNum": "1677553",
    "intrsThemaArray": "정신건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "자살예방정책과",
@@ -630,7 +630,7 @@
    "srvPvsnNm": "전자바우처(바우처)",
    "svcfrstRegTs": "20240626"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00005567",
@@ -753,7 +753,7 @@
  "WLF00006196": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "500588",
+   "inqNum": "503700",
    "intrsThemaArray": "일자리,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "자활정책과",
@@ -769,7 +769,7 @@
    "svcfrstRegTs": "20251127",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006196",
@@ -848,7 +848,7 @@
  "WLF00005442": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "254766",
+   "inqNum": "255225",
    "intrsThemaArray": "안전·위기,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "사회서비스사업과",
@@ -863,7 +863,7 @@
    "srvPvsnNm": "전자바우처(바우처)",
    "svcfrstRegTs": "20240521"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00005442",
@@ -952,7 +952,7 @@
  "WLF00001164": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "2127203",
+   "inqNum": "2132436",
    "intrsThemaArray": "생활지원,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "기초연금과",
@@ -968,7 +968,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001164",
@@ -1086,7 +1086,7 @@
  "WLF00001155": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "434763",
+   "inqNum": "437934",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인지원과",
@@ -1102,7 +1102,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001155",
@@ -1195,7 +1195,7 @@
  "WLF00003265": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "274085",
+   "inqNum": "274748",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인자립기반과",
@@ -1211,7 +1211,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003265",
@@ -1302,7 +1302,7 @@
  "WLF00003249": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5567180",
+   "inqNum": "5568112",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인자립기반과",
@@ -1318,7 +1318,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003249",
@@ -1407,7 +1407,7 @@
  "WLF00003191": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "290128",
+   "inqNum": "290728",
    "intrsThemaArray": "생활지원,안전·위기,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인정책과",
@@ -1423,7 +1423,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003191",
@@ -1500,7 +1500,7 @@
  "WLF00000072": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "4237463",
+   "inqNum": "4242735",
    "intrsThemaArray": "생활지원,주거,에너지",
    "jurMnofNm": "기후에너지환경부",
    "jurOrgNm": "기후적응과",
@@ -1516,7 +1516,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000072",
@@ -1616,7 +1616,7 @@
  "WLF00004638": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "55828",
+   "inqNum": "56454",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "산업통상부",
    "jurOrgNm": "가스산업과",
@@ -1632,7 +1632,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "다자녀,보훈대상자,장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004638",
@@ -1750,7 +1750,7 @@
  "WLF00003234": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5411",
+   "inqNum": "5570",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "사회적기업과",
@@ -1765,7 +1765,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003234",
@@ -1860,7 +1860,7 @@
  "WLF00006224": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "11206",
+   "inqNum": "11294",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "기후에너지환경부",
    "jurOrgNm": "수도기획과",
@@ -1876,7 +1876,7 @@
    "svcfrstRegTs": "20260316",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006224",
@@ -1948,7 +1948,7 @@
  "WLF00004649": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "187354",
+   "inqNum": "187814",
    "intrsThemaArray": "주거",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주거복지지원과",
@@ -1964,7 +1964,7 @@
    "svcfrstRegTs": "20210904",
    "trgterIndvdlArray": "저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004649",
@@ -2098,7 +2098,7 @@
  "WLF00004663": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "74389",
+   "inqNum": "74599",
    "intrsThemaArray": "주거",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주거복지지원과",
@@ -2114,7 +2114,7 @@
    "svcfrstRegTs": "20220603",
    "trgterIndvdlArray": "다문화·탈북민,다자녀,보훈대상자,장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004663",
@@ -2436,7 +2436,7 @@
  "WLF00000057": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "25874",
+   "inqNum": "26006",
    "intrsThemaArray": "주거",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주택공급정책과",
@@ -2451,7 +2451,7 @@
    "srvPvsnNm": "현물지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000057",
@@ -2559,7 +2559,7 @@
  "WLF00001108": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "21698",
+   "inqNum": "21756",
    "intrsThemaArray": "생활지원,서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "금융정책과",
@@ -2574,7 +2574,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001108",
@@ -2658,7 +2658,7 @@
  "WLF00001079": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "72114",
+   "inqNum": "72264",
    "intrsThemaArray": "주거,서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "금융정책과",
@@ -2673,7 +2673,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001079",
@@ -2751,7 +2751,7 @@
  "WLF00001111": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "14983",
+   "inqNum": "15054",
    "intrsThemaArray": "문화·여가",
    "jurMnofNm": "문화체육관광부",
    "jurOrgNm": "지역문화정책과",
@@ -2766,7 +2766,7 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001111",
@@ -2833,7 +2833,7 @@
  "WLF00000098": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "21665",
+   "inqNum": "21741",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "복지서비스과",
@@ -2849,7 +2849,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000098",
@@ -2983,7 +2983,7 @@
  "WLF00000815": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6540",
+   "inqNum": "6592",
    "intrsThemaArray": "주거",
    "jurMnofNm": "통일부",
    "jurOrgNm": "교육기획과",
@@ -2999,7 +2999,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "다문화·탈북민"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000815",
@@ -3096,7 +3096,7 @@
  "WLF00000050": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "10866",
+   "inqNum": "10919",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "보상정책과",
@@ -3112,7 +3112,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000050",
@@ -3197,7 +3197,7 @@
  "WLF00001066": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "11682",
+   "inqNum": "11745",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "보상정책과",
@@ -3213,7 +3213,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001066",
@@ -3298,7 +3298,7 @@
  "WLF00001122": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "14229",
+   "inqNum": "14270",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "복지정책과",
@@ -3314,7 +3314,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001122",
@@ -3393,7 +3393,7 @@
  "WLF00001176": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "231925",
+   "inqNum": "232520",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "질병정책과",
@@ -3408,7 +3408,7 @@
    "srvPvsnNm": "현물지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001176",
@@ -3513,7 +3513,7 @@
  "WLF00000065": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "12216",
+   "inqNum": "12268",
    "intrsThemaArray": "생활지원,법률",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인서비스과",
@@ -3529,7 +3529,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000065",
@@ -3653,7 +3653,7 @@
  "WLF00005026": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8356",
+   "inqNum": "8385",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "해양수산부",
    "jurOrgNm": "소득복지과",
@@ -3668,7 +3668,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20230316"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00005026",
@@ -3757,7 +3757,7 @@
  "WLF00003205": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "13161",
+   "inqNum": "13224",
    "intrsThemaArray": "일자리,교육",
    "jurMnofNm": "중소벤처기업부",
    "jurOrgNm": "창업생태계과",
@@ -3772,7 +3772,7 @@
    "srvPvsnNm": "시설입소",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003205",
@@ -3850,7 +3850,7 @@
  "WLF00000069": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7645",
+   "inqNum": "7680",
    "intrsThemaArray": "신체건강,생활지원,보호·돌봄",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "복지서비스과",
@@ -3866,7 +3866,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000069",
@@ -3971,7 +3971,7 @@
  "WLF00003230": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5230",
+   "inqNum": "5261",
    "intrsThemaArray": "생활지원,주거",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인정책과",
@@ -3987,7 +3987,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003230",
@@ -4105,7 +4105,7 @@
  "WLF00004637": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "79030",
+   "inqNum": "79234",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "방송통신위원회",
    "jurOrgNm": "방송정책기획과",
@@ -4121,7 +4121,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자,장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004637",
@@ -4201,7 +4201,7 @@
  "WLF00003243": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "16199",
+   "inqNum": "16257",
    "intrsThemaArray": "생활지원,보호·돌봄",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "복지서비스과",
@@ -4217,7 +4217,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003243",
@@ -4410,7 +4410,7 @@
  "WLF00001170": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "18788",
+   "inqNum": "18857",
    "intrsThemaArray": "신체건강,보호·돌봄",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "복지서비스과",
@@ -4426,7 +4426,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001170",
@@ -4539,7 +4539,7 @@
  "WLF00003189": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "12857",
+   "inqNum": "12907",
    "intrsThemaArray": "일자리,교육",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인자립기반과",
@@ -4555,7 +4555,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003189",
@@ -4641,7 +4641,7 @@
  "WLF00000025": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "87972",
+   "inqNum": "88251",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인자립기반과",
@@ -4657,7 +4657,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000025",
@@ -4741,7 +4741,7 @@
  "WLF00004660": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "39952",
+   "inqNum": "40036",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "고령사회인력정책과",
@@ -4756,7 +4756,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20220329"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004660",
@@ -4834,7 +4834,7 @@
  "WLF00004639": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "105878",
+   "inqNum": "106691",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "기후에너지환경부",
    "jurOrgNm": "전력시장과",
@@ -4850,7 +4850,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자,장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004639",
@@ -4938,7 +4938,7 @@
  "WLF00000099": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "42261",
+   "inqNum": "42356",
    "intrsThemaArray": "신체건강,정신건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애인정책과",
@@ -4954,7 +4954,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000099",
@@ -5033,7 +5033,7 @@
  "WLF00006217": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "4593",
+   "inqNum": "4650",
    "jurMnofNm": "법무부",
    "jurOrgNm": "보호정책과",
    "lifeArray": "청소년,청년,중장년,노년",
@@ -5047,7 +5047,7 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20260316"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006217",
@@ -5112,7 +5112,7 @@
  "WLF00000027": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7779",
+   "inqNum": "7829",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "장애예방운전지원과",
    "lifeArray": "청소년,청년,중장년,노년",
@@ -5127,7 +5127,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000027",
@@ -5193,7 +5193,7 @@
  "WLF00000031": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "18526",
+   "inqNum": "18603",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "인구정책총괄과",
@@ -5208,7 +5208,7 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000031",
@@ -5297,7 +5297,7 @@
  "WLF00003215": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5032",
+   "inqNum": "5079",
    "intrsThemaArray": "신체건강,생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "질병정책과",
@@ -5312,7 +5312,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003215",
@@ -5400,7 +5400,7 @@
  "WLF00001184": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "78430",
+   "inqNum": "78688",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "질병정책과",
@@ -5416,7 +5416,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001184",
@@ -5521,7 +5521,7 @@
  "WLF00003252": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8914",
+   "inqNum": "8944",
    "intrsThemaArray": "안전·위기,보호·돌봄,법률",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인정책과",
@@ -5536,7 +5536,7 @@
    "srvPvsnNm": "프로그램/서비스(서비스),시설입소",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003252",
@@ -5602,7 +5602,7 @@
  "WLF00006226": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "11537",
+   "inqNum": "11707",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "기후에너지환경부",
    "jurOrgNm": "열산업혁신과",
@@ -5618,7 +5618,7 @@
    "svcfrstRegTs": "20260316",
    "trgterIndvdlArray": "장애인,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006226",
@@ -5685,7 +5685,7 @@
  "WLF00006225": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "4418",
+   "inqNum": "4483",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "기후에너지환경부",
    "jurOrgNm": "열산업혁신과",
@@ -5700,7 +5700,7 @@
    "srvPvsnNm": "감면",
    "svcfrstRegTs": "20260316"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006225",
@@ -5761,7 +5761,7 @@
  "WLF00000033": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "15099",
+   "inqNum": "15162",
    "intrsThemaArray": "신체건강,정신건강,생활지원,일자리,문화·여가,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인지원과",
@@ -5776,7 +5776,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000033",
@@ -5842,7 +5842,7 @@
  "WLF00001093": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "127155",
+   "inqNum": "127462",
    "intrsThemaArray": "생활지원,안전·위기",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인정책과",
@@ -5858,7 +5858,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001093",
@@ -5964,7 +5964,7 @@
  "WLF00001169": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "126456",
+   "inqNum": "126656",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "기초의료보장과",
@@ -5980,7 +5980,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001169",
@@ -6086,7 +6086,7 @@
  "WLF00000062": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "58285",
+   "inqNum": "58449",
    "intrsThemaArray": "주거",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주거복지지원과",
@@ -6102,7 +6102,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "다자녀,장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000062",
@@ -6196,7 +6196,7 @@
  "WLF00005446": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7697",
+   "inqNum": "7737",
    "intrsThemaArray": "생활지원,안전·위기",
    "jurMnofNm": "해양수산부",
    "jurOrgNm": "소득복지과",
@@ -6212,7 +6212,7 @@
    "svcfrstRegTs": "20240521",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00005446",
@@ -6293,7 +6293,7 @@
  "WLF00003240": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "173705",
+   "inqNum": "173892",
    "intrsThemaArray": "교육",
    "jurMnofNm": "교육부",
    "jurOrgNm": "평생학습정책과",
@@ -6309,7 +6309,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003240",
@@ -6403,7 +6403,7 @@
  "WLF00003196": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5851",
+   "inqNum": "5892",
    "intrsThemaArray": "생활지원,서민금융",
    "jurMnofNm": "해양수산부",
    "jurOrgNm": "연안해운과",
@@ -6418,7 +6418,7 @@
    "srvPvsnNm": "감면",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003196",
@@ -6517,7 +6517,7 @@
  "WLF00003280": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "17616",
+   "inqNum": "17672",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "건강정책과",
@@ -6532,7 +6532,7 @@
    "srvPvsnNm": "현물지급,프로그램/서비스(서비스)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003280",
@@ -6611,7 +6611,7 @@
  "WLF00003281": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "34353",
+   "inqNum": "34444",
    "intrsThemaArray": "일자리,교육",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "생활안정과",
@@ -6627,7 +6627,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003281",
@@ -6694,7 +6694,7 @@
  "WLF00001096": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7973",
+   "inqNum": "8027",
    "intrsThemaArray": "교육,서민금융",
    "jurMnofNm": "농림축산식품부",
    "jurOrgNm": "농촌사회서비스과",
@@ -6709,7 +6709,7 @@
    "srvPvsnNm": "현금대여(융자)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001096",
@@ -6775,7 +6775,7 @@
  "WLF00000103": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "26845",
+   "inqNum": "26952",
    "intrsThemaArray": "신체건강,생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "요양보험제도과",
@@ -6790,7 +6790,7 @@
    "srvPvsnNm": "현물지급,기타",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000103",
@@ -6873,7 +6873,7 @@
  "WLF00000058": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "14167",
+   "inqNum": "14229",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "중소벤처기업부",
    "jurOrgNm": "소상공인경영안정정책과",
@@ -6888,7 +6888,7 @@
    "srvPvsnNm": "현금대여(융자)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000058",
@@ -7043,7 +7043,7 @@
  "WLF00001177": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "58867",
+   "inqNum": "59052",
    "intrsThemaArray": "신체건강,생활지원,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "요양보험제도과",
@@ -7058,7 +7058,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001177",
@@ -7142,7 +7142,7 @@
  "WLF00000812": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8543",
+   "inqNum": "8592",
    "intrsThemaArray": "생활지원,교육",
    "jurMnofNm": "농림축산식품부",
    "jurOrgNm": "농촌사회서비스과",
@@ -7157,7 +7157,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000812",
@@ -7229,7 +7229,7 @@
  "WLF00004647": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "35525",
+   "inqNum": "35709",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "연금급여팀",
@@ -7244,7 +7244,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210904"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004647",
@@ -7321,7 +7321,7 @@
  "WLF00003241": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "27184",
+   "inqNum": "27225",
    "intrsThemaArray": "생활지원,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "연금급여팀",
@@ -7336,7 +7336,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003241",
@@ -7407,7 +7407,7 @@
  "WLF00001181": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "11694",
+   "inqNum": "11728",
    "intrsThemaArray": "생활지원,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인정책과",
@@ -7422,7 +7422,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001181",
@@ -7483,7 +7483,7 @@
  "WLF00004651": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "35102",
+   "inqNum": "35162",
    "intrsThemaArray": "일자리,교육",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "장애인고용과",
@@ -7499,7 +7499,7 @@
    "svcfrstRegTs": "20210904",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004651",
@@ -7607,7 +7607,7 @@
  "WLF00001115": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "67325",
+   "inqNum": "67493",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인건강과",
@@ -7623,7 +7623,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001115",
@@ -7722,7 +7722,7 @@
  "WLF00001179": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "72842",
+   "inqNum": "73010",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인건강과",
@@ -7738,7 +7738,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001179",
@@ -7823,7 +7823,7 @@
  "WLF00003173": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "57032",
+   "inqNum": "57172",
    "intrsThemaArray": "문화·여가",
    "jurMnofNm": "문화체육관광부",
    "jurOrgNm": "장애인체육과",
@@ -7839,7 +7839,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003173",
@@ -7911,7 +7911,7 @@
  "WLF00003238": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "35616",
+   "inqNum": "35692",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "건강증진과",
@@ -7927,7 +7927,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003238",
@@ -8022,7 +8022,7 @@
  "WLF00006207": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "2789",
+   "inqNum": "2823",
    "jurMnofNm": "과학기술정보통신부",
    "jurOrgNm": "디지털포용정책팀",
    "lifeArray": "청소년,청년,중장년,노년",
@@ -8037,7 +8037,7 @@
    "svcfrstRegTs": "20260309",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006207",
@@ -8108,7 +8108,7 @@
  "WLF00000047": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "64021",
+   "inqNum": "64190",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "질병관리청",
    "jurOrgNm": "만성질환예방과",
@@ -8123,7 +8123,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000047",
@@ -8194,7 +8194,7 @@
  "WLF00003247": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "183294",
+   "inqNum": "183643",
    "intrsThemaArray": "신체건강,생활지원",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "필수의료총괄과",
@@ -8210,7 +8210,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003247",
@@ -8277,7 +8277,7 @@
  "WLF00000038": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8419",
+   "inqNum": "8478",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "보훈문화정책과",
@@ -8293,7 +8293,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000038",
@@ -8360,7 +8360,7 @@
  "WLF00001149": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "30881",
+   "inqNum": "30986",
    "intrsThemaArray": "일자리,서민금융",
    "jurMnofNm": "산림청",
    "jurOrgNm": "산림자원과",
@@ -8376,7 +8376,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001149",
@@ -8573,7 +8573,7 @@
  "WLF00001086": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "58082",
+   "inqNum": "58166",
    "intrsThemaArray": "생활지원,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "요양보험제도과",
@@ -8588,7 +8588,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001086",
@@ -8675,7 +8675,7 @@
  "WLF00004655": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "31809",
+   "inqNum": "31905",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "장애인고용과",
@@ -8691,7 +8691,7 @@
    "svcfrstRegTs": "20211018",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004655",
@@ -8763,7 +8763,7 @@
  "WLF00003245": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "282896",
+   "inqNum": "283996",
    "intrsThemaArray": "생활지원,일자리",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "국민취업지원기획팀",
@@ -8779,7 +8779,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003245",
@@ -8870,7 +8870,7 @@
  "WLF00004662": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "22830",
+   "inqNum": "22875",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "보상정책과",
@@ -8886,7 +8886,7 @@
    "svcfrstRegTs": "20220517",
    "trgterIndvdlArray": "보훈대상자,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004662",
@@ -9003,7 +9003,7 @@
  "WLF00000075": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6645",
+   "inqNum": "6677",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "중소벤처기업부",
    "jurOrgNm": "중소기업제도과",
@@ -9018,7 +9018,7 @@
    "srvPvsnNm": "시설입소",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000075",
@@ -9096,7 +9096,7 @@
  "WLF00000922": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5580",
+   "inqNum": "5609",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "중소벤처기업부",
    "jurOrgNm": "중소기업제도과",
@@ -9111,7 +9111,7 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000922",
@@ -9189,7 +9189,7 @@
  "WLF00000975": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7520",
+   "inqNum": "7564",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "중소벤처기업부",
    "jurOrgNm": "중소기업제도과",
@@ -9204,7 +9204,7 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000975",
@@ -9270,7 +9270,7 @@
  "WLF00004648": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6207",
+   "inqNum": "6234",
    "intrsThemaArray": "신체건강,안전·위기,보호·돌봄",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "산재보상정책과",
@@ -9285,7 +9285,7 @@
    "srvPvsnNm": "시설입소",
    "svcfrstRegTs": "20210904"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00004648",
@@ -9358,7 +9358,7 @@
  "WLF00000055": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "308408",
+   "inqNum": "308873",
    "intrsThemaArray": "문화·여가",
    "jurMnofNm": "문화체육관광부",
    "jurOrgNm": "문화정책과",
@@ -9374,7 +9374,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000055",
@@ -9463,7 +9463,7 @@
  "WLF00003199": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "28681",
+   "inqNum": "28801",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "문화체육관광부",
    "jurOrgNm": "예술인권리보호과",
@@ -9479,7 +9479,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003199",
@@ -9558,7 +9558,7 @@
  "WLF00003251": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "18145",
+   "inqNum": "18211",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "산림청",
    "jurOrgNm": "산림환경보호과",
@@ -9574,7 +9574,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003251",
@@ -10451,7 +10451,7 @@
  "WLF00001156": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "10567",
+   "inqNum": "10608",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "고령사회인력정책과",
@@ -10466,7 +10466,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001156",
@@ -10537,7 +10537,7 @@
  "WLF00001152": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "9881",
+   "inqNum": "9944",
    "intrsThemaArray": "생활지원,안전·위기",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "자활정책과",
@@ -10552,7 +10552,7 @@
    "srvPvsnNm": "시설입소",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001152",
@@ -10624,7 +10624,7 @@
  "WLF00000048": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "23660",
+   "inqNum": "23724",
    "intrsThemaArray": "생활지원,주거,서민금융",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "생활안정과",
@@ -10640,7 +10640,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00000048",
@@ -10726,7 +10726,7 @@
  "WLF00003272": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "11931",
+   "inqNum": "11982",
    "intrsThemaArray": "신체건강,정신건강,생활지원,일자리,교육",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "사회서비스자원과",
@@ -10741,7 +10741,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003272",
@@ -10831,7 +10831,7 @@
  "WLF00001073": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7987",
+   "inqNum": "8041",
    "intrsThemaArray": "교육",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "제대군인일자리과",
@@ -10847,7 +10847,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001073",
@@ -10943,7 +10943,7 @@
  "WLF00003248": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "53417",
+   "inqNum": "53520",
    "intrsThemaArray": "생활지원,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "요양보험제도과",
@@ -10958,7 +10958,7 @@
    "srvPvsnNm": "현물지급",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003248",
@@ -11036,7 +11036,7 @@
  "WLF00003194": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "30914",
+   "inqNum": "31032",
    "intrsThemaArray": "생활지원,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "요양보험제도과",
@@ -11051,7 +11051,7 @@
    "srvPvsnNm": "시설입소",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003194",
@@ -11129,7 +11129,7 @@
  "WLF00001063": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "207789",
+   "inqNum": "208050",
    "intrsThemaArray": "주거,서민금융",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주택기금과",
@@ -11144,7 +11144,7 @@
    "srvPvsnNm": "현금대여(융자)",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001063",
@@ -11222,7 +11222,7 @@
  "WLF00003222": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "186208",
+   "inqNum": "186651",
    "intrsThemaArray": "주거,서민금융",
    "jurMnofNm": "국토교통부",
    "jurOrgNm": "주택기금과",
@@ -11238,7 +11238,7 @@
    "svcfrstRegTs": "20210903",
    "trgterIndvdlArray": "다문화·탈북민,다자녀,장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00003222",
@@ -11324,7 +11324,7 @@
  "WLF00001100": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6693",
+   "inqNum": "6726",
    "intrsThemaArray": "문화·여가",
    "jurMnofNm": "문화체육관광부",
    "jurOrgNm": "도서관정책기획단",
@@ -11339,7 +11339,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20210903"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00001100",
@@ -11407,7 +11407,7 @@
  "WLF00005004": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "56589",
+   "inqNum": "56710",
    "intrsThemaArray": "정신건강",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인건강과",
@@ -11423,7 +11423,7 @@
    "svcfrstRegTs": "20230113",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00005004",
@@ -11522,7 +11522,7 @@
  "WLF00006282": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "2753",
+   "inqNum": "2846",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "보훈의료재활과",
@@ -11538,7 +11538,7 @@
    "svcfrstRegTs": "20260521",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006282",
@@ -11605,7 +11605,7 @@
  "WLF00006265": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "5166",
+   "inqNum": "5256",
    "jurMnofNm": "산업통상부",
    "jurOrgNm": "석탄산업과",
    "lifeArray": "아동,청소년,청년,중장년,노년",
@@ -11620,7 +11620,7 @@
    "svcfrstRegTs": "20260506",
    "trgterIndvdlArray": "장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006265",
@@ -11706,7 +11706,7 @@
  "WLF00006315": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "3502",
+   "inqNum": "3598",
    "intrsThemaArray": "정신건강,생활지원,안전·위기,임신·출산,보육",
    "jurMnofNm": "성평등가족부",
    "jurOrgNm": "가족정책과",
@@ -11722,7 +11722,7 @@
    "svcfrstRegTs": "20260610",
    "trgterIndvdlArray": "다문화·탈북민,다자녀"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006315",
@@ -11795,7 +11795,7 @@
  "WLF00006248": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "65089",
+   "inqNum": "65593",
    "intrsThemaArray": "신체건강",
    "jurMnofNm": "농림축산식품부",
    "jurOrgNm": "식품외식산업과",
@@ -11810,7 +11810,7 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20260413"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006248",
@@ -11885,7 +11885,7 @@
  "WLF00006237": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8842",
+   "inqNum": "8939",
    "intrsThemaArray": "안전·위기",
    "jurMnofNm": "행정안전부",
    "jurOrgNm": "복지자원연계팀",
@@ -11901,7 +11901,7 @@
    "svcfrstRegTs": "20260402",
    "trgterIndvdlArray": "장애인,저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006237",
@@ -11953,7 +11953,7 @@
  "WLF00006319": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8989",
+   "inqNum": "9092",
    "intrsThemaArray": "안전·위기,서민금융",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "퇴직연금복지과",
@@ -11968,7 +11968,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20260611"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006319",
@@ -12058,7 +12058,7 @@
  "WLF00006290": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "4751",
+   "inqNum": "4808",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
    "lifeArray": "청년,중장년,노년",
@@ -12072,7 +12072,7 @@
    "srvPvsnNm": "현금대여(융자)",
    "svcfrstRegTs": "20260601"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006290",
@@ -12137,7 +12137,7 @@
  "WLF00006312": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "3395",
+   "inqNum": "3441",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "성평등가족부",
    "jurOrgNm": "폭력예방교육과",
@@ -12152,7 +12152,7 @@
    "srvPvsnNm": "현금지급,기타",
    "svcfrstRegTs": "20260608"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006312",
@@ -12223,7 +12223,7 @@
  "WLF00006303": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6993",
+   "inqNum": "7058",
    "intrsThemaArray": "신체건강,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인건강과",
@@ -12239,7 +12239,7 @@
    "svcfrstRegTs": "20260605",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006303",
@@ -12323,7 +12323,7 @@
  "WLF00006296": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "7902",
+   "inqNum": "8000",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "국가보훈부",
    "jurOrgNm": "복지정책과",
@@ -12339,7 +12339,7 @@
    "svcfrstRegTs": "20260602",
    "trgterIndvdlArray": "보훈대상자"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006296",
@@ -12423,7 +12423,7 @@
  "WLF00006295": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "3483",
+   "inqNum": "3555",
    "intrsThemaArray": "서민금융,법률",
    "jurMnofNm": "법무부",
    "jurOrgNm": "법무과",
@@ -12438,7 +12438,7 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20260602"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006295",
@@ -12505,7 +12505,7 @@
  "WLF00006241": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "16609",
+   "inqNum": "16808",
    "intrsThemaArray": "정신건강,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "정신건강정책과",
@@ -12521,7 +12521,7 @@
    "svcfrstRegTs": "20260409",
    "trgterIndvdlArray": "장애인"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006241",
@@ -12618,7 +12618,7 @@
  "WLF00006264": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "24002",
+   "inqNum": "24225",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "퇴직연금복지과",
@@ -12634,7 +12634,7 @@
    "svcfrstRegTs": "20260423",
    "trgterIndvdlArray": "다자녀,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006264",
@@ -12717,7 +12717,7 @@
  "WLF00006291": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "4035",
+   "inqNum": "4080",
    "intrsThemaArray": "신체건강,서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "노인건강과",
@@ -12733,7 +12733,7 @@
    "svcfrstRegTs": "20260601",
    "trgterIndvdlArray": "저소득,한부모·조손"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006291",
@@ -12810,7 +12810,7 @@
  "WLF00006227": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "17517",
+   "inqNum": "17801",
    "intrsThemaArray": "생활지원",
    "jurMnofNm": "과학기술정보통신부",
    "jurOrgNm": "통신경쟁정책과",
@@ -12826,7 +12826,7 @@
    "svcfrstRegTs": "20260316",
    "trgterIndvdlArray": "보훈대상자,장애인,저소득"
   },
-  "lastSeen": "2026-11-04",
+  "lastSeen": "2026-11-06",
   "active": true,
   "detail": {
    "servId": "WLF00006227",
@@ -12926,7 +12926,7 @@
  "WLF00006278": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "13571",
+   "inqNum": "13750",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -12942,13 +12942,74 @@
    "svcfrstRegTs": "20260506",
    "trgterIndvdlArray": "한부모·조손"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006278",
+   "servNm": "서민금융진흥원 소액보험(한부모가정의료보험)",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "한부모가족의 18세 미만 아동과 그 부양자 중 아래에 해당하는 자를 대상으로 지원합니다.\n1.한부모가족 아동양육비 지원대상자\n2. 생계/의료급여 대상자가 아닌 자\n한부모가족증명서, 가족관계증명서(상세), 사회보장급여통지서(아동양육비 필수기재) 등 필수서류를 통해 자격요건 확인",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "보장항목과 일치하는 사고 발생 시 보험금 형태로 지급합니다.",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "경제적 기반이 취약하고, 불의의 사고로 마주할 수 있는 경제적 위기에 대응 할 수 있도록 보험계약의 체결·유지를 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "현금지급",
+   "lifeArray": "중장년, 노년, 아동, 청소년, 청년",
+   "trgterIndvdlArray": "한부모·조손",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 삼성화재해상보험, 메리츠화재해상보험, 현대해상화재보험, DB손해보험, KB손해보험 에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 삼성화재해상보험, 메리츠화재해상보험, 현대해상화재보험, DB손해보험, KB손해보험 에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 삼성화재해상보험, 메리츠화재해상보험, 현대해상화재보험, DB손해보험, KB손해보험 에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 삼성화재해상보험, 메리츠화재해상보험, 현대해상화재보험, DB손해보험, KB손해보험 에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 삼성화재해상보험, 메리츠화재해상보험, 현대해상화재보험, DB손해보험, KB손해보험 에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006277": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6486",
+   "inqNum": "6552",
    "intrsThemaArray": "교육,서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -12963,13 +13024,73 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006277",
+   "servNm": "서민금융진흥원 신용･부채관리 컨설팅",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "정책서민금융상품 이용자와 업무협약기관(정부, 지방자치단체, 관계기관) 이용자를 지원합니다.\n * 햇살론유스, 햇살론카드, 불법사금융예방대출,  햇살론 일반, 햇살론 특례, 미소금융, 청년희망적금, 청년도약계좌 등을 이용 중인 자 등",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "고객의 신용 점검 및 부채관리 등을 위한 금융 전문가의 1대1 무료 컨설팅을 진행합니다.",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "정책서민금융상품 이용자 등을 대상으로 금융전문가가 고객님의 1:1 금융 주치의가 되어 신용·부채 상태를 진단하고 상담(모든 상담은 전화통화로 진행)까지 진행하는 맞춤형 무료 컨설팅을 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "프로그램/서비스(서비스)",
+   "lifeArray": "청년, 노년, 중장년",
+   "intrsThemaArray": "교육, 서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 서민금융진흥원에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006276": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "3452",
+   "inqNum": "3493",
    "intrsThemaArray": "교육,서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -12984,13 +13105,73 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006276",
+   "servNm": "서민금융진흥원 자영업 컨설팅",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "연소득 4,500만원 이하이면서 신용점수가 하위 20%에 해당하는 서민금융진흥원 및 서민금융 상품을 이용하는 자영업자이거나 창업예정자를 대상으로 지원합니다.",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "지역별·업종별 담당 컨설턴트가 사업장을 방문하여 경영진단 및 사업노하우를 무료로 전수합니다.",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "미소금융 등 서민금융 이용자 또는 이용 요건을 갖춘 저신용 영세 자영업자를 대상으로 경영진단과 사업 솔루션 제공을 통해 사업 환경 개선을 도모합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "프로그램/서비스(서비스)",
+   "lifeArray": "중장년, 노년, 청년",
+   "intrsThemaArray": "서민금융, 교육",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 서민금융진흥원에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006275": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "10113",
+   "inqNum": "10214",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13005,13 +13186,73 @@
    "srvPvsnNm": "전자바우처(바우처)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006275",
+   "servNm": "햇살론카드",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "개인신용평점 하위 20%이하 중 개인신용카드를 미 보유 중이며, 연 가처분 소득이 연 600만원 이상인 자를 대상으로 지원합니다. * '26년 4월부터 KCB 700점 또는 NICE 749점 이하\n햇살론 카드 필수교육(3과목) 이수 필수\n개인회생, 개인워크아웃, 새출발기금, 서금원 자체 채무조정 성실상환자의 경우 6개월 이상 성실 상환 시 공공정보 등재 시에도 신청가능",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "보증한도 : 신규발급 시 최대 200만원, 성실이용 시 최대 300만원\n * 카드 이용한도는 보증한도에서 20만원 차감하여 부여 * 개인별 신용도를 고려하여 이용한도 부여\n보증기간 : 최대 5년(카드 이용기간과 동일)\n취급기관 : 롯데, 현대, 국민 삼성, 신한, 우리, 하나카드",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "신용카드 발급이 어려워 할부·포인트 등 이용혜택에서 소외된 저신용자 분들의 금융상품 선택권을 확대하고 건전한 소비로 이어질 수 있도록 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "전자바우처(바우처)",
+   "lifeArray": "청년, 노년, 중장년",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006274": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "10344",
+   "inqNum": "10498",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13027,13 +13268,74 @@
    "svcfrstRegTs": "20260506",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006274",
+   "servNm": "햇살론일반",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "소득증빙이 가능하며 연소득 3천5백만원 이거나, 또는 개인신용평점 하위 20%이하이면서 연소득 4천5백만원 이하인 자를 대상으로 지원합니다. * '26년 4월부터 KCB 700점 또는 NICE 749점 이하\n개인회생, 개인워크아웃, 새출발기금, 서금원 자체 채무조정 성실상환자의 경우 6개월 이상 성실 상환 시 공공정보 등재 시에도 신청가능",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "보증한도 : 최대 1,500만원\n금리 : 연 10% 이내(보증료 포함), 금융회사별 상이\n보증료 : 2.5%이내\n대출기간 : 5년이내, 1년 단위로 신청 가능(원리금 균등분할 상환, 중도상환 수수료 없음)",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "제도권 금융기관 이용이 러여누 저신용·저소득자의 생계지를 지원하여 서민증의 경제적 자립·자활을 도모합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "현금대여(융자)",
+   "lifeArray": "중장년, 노년, 청년",
+   "trgterIndvdlArray": "저소득",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 새마을금고, 산립조합), 저축은행, 캐피탈(롯데), 보험(삼성생명)에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 새마을금고, 산립조합), 저축은행, 캐피탈(롯데), 보험(삼성생명)에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 새마을금고, 산립조합), 저축은행, 캐피탈(롯데), 보험(삼성생명)에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 새마을금고, 산립조합), 저축은행, 캐피탈(롯데), 보험(삼성생명)에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 새마을금고, 산립조합), 저축은행, 캐피탈(롯데), 보험(삼성생명)에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006273": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "18164",
+   "inqNum": "18287",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13049,13 +13351,74 @@
    "svcfrstRegTs": "20260506",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006273",
+   "servNm": "햇살론특례",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "개인신용평점 하위 20%이하이면서 연소득 35백만원 이하인 자를 대상으로 지원합니다.\n개인회생, 개인워크아웃, 새출발기금, 서금원 자체 채무조정 성실상환자의 경우 6개월 이상 성실 상환 시 공공정보 등재 시에도 신청가능",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "보증한도 : 최대 1,000만원\n금리 : 연 12.5% 이내(보증료 포함), 사회적 배려대상자 : 9.9% 이내\n대출기간 : 3년 또는 5년(원리금 균등분할 상환, 중도상환 수수료 없음)",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "소득 증빙이 어렵거나 신용등급이 상대적으로 낮아 햇살론 일반보증을 이용하기 어려운 최저신용자를 제도권 금융으로 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "현금대여(융자)",
+   "lifeArray": "청년, 노년, 중장년",
+   "trgterIndvdlArray": "저소득",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 산립조합), 저축은행에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 산립조합), 저축은행에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 산립조합), 저축은행에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 산립조합), 저축은행에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,수협은행,아이엠뱅크,우리은행,전북은행,제주은행,케이뱅크,토스뱅크,하나은행, 상호금융(농협, 수협, 신협, 산립조합), 저축은행에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006272": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6984",
+   "inqNum": "7039",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13070,13 +13433,73 @@
    "srvPvsnNm": "전자바우처(바우처)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006272",
+   "servNm": "소상공인 특례 햇살론카드",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "신용평점 하위 50%이하이면서 연간 가처분 소득 600만원 이상인 개인사업자를 대상으로 지원합니다.\n'26년 4월부터 KCB 875점 또는 NICE 889점 이하\n햇살론 카드 필수교육 이수 또는 서금원 자영업 컨설팅 이수 필수\n개인회생, 개인워크아웃, 새출발기금, 서금원 자체 채무조정 성실상환자의 경우 6개월 이상 성실 상환 시 공공정보 등재 시에도 신청가능",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "보증한도 : 최대 500만원 한도\n * 카드 이용한도는 보증한도에서 20만원 차감하여 부여 ** 개인별 신용도를 고려하여 이용한도 부여\n보증기간 : 최대 5년(카드 이용기간과 동일)",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "개인사업자가 최소한의 상환 능력을 충족하면 사업 경비 등 지출에 부담 없이 영업을 지속할 수 있도록 도움을 주고 경제적 재기를 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "전자바우처(바우처)",
+   "lifeArray": "중장년, 노년, 청년",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드, 농협카드ㅍ에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드, 농협카드에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드, 농협카드에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드, 농협카드에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 롯데카드, 현대카드, 국민카드, 삼성카드, 신한카드, 우리카드,  하나카드, 농협카드에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006271": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "6159",
+   "inqNum": "6216",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13091,13 +13514,79 @@
    "srvPvsnNm": "현금대여(융자)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006271",
+   "servNm": "햇살론119",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "「개인사업자대출119」 또는 「소상공인 119Plus」 프로그램을 이용하고, 대출 신청일 현재 연체 중이지 않은 연 매출 3억원 이하의 영세 개인사업자를 대상으로 지원합니다.",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "재기 의지가 있는 영세 개인사업자에게 사업 운전자금을 지원합니다.\n대출한도 : 최대2,000만원(신규 1,000만원 + 추가 1,000만원) ※ 서민금융진흥원 보증심사 결과 등에 따라 상이할 수 있습니다.\n대출기간 : 5년(1년거치 + 4년 원 균등 분할 상환, 중도상황 수수료 없음)\n대출금리 : 은행별 상이(연~7% 수준, 개인 신용평가결과에 따라 상이)",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "은행 채무조정 프로그램을 이용중인 취약 개인 사업자에게 금융부담 경감과 함께 사업 운영에 필요한 신규 운전자금 보증부대출입니다.(햇살론119는 은행권 특별출연금을 재원으로 운영되는 민간위탁보증상품입니다.)",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "현금대여(융자)",
+   "lifeArray": "청년, 노년, 중장년",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,아이엠뱅크,우리은행,전북은행,하나은행,수협은행,제주은행,카카오뱅크,케이뱅크,토스뱅크,SC제일은행에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,아이엠뱅크,우리은행,전북은행,하나은행,수협은행,제주은행,카카오뱅크,케이뱅크,토스뱅크,SC제일은행ㅍ에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,아이엠뱅크,우리은행,전북은행,하나은행,수협은행,제주은행,카카오뱅크,케이뱅크,토스뱅크,SC제일은행에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 IBK기업은행,경남은행,광주은행,국민은행,농협은행,부산은행,신한은행,아이엠뱅크,우리은행,전북은행,하나은행,수협은행,제주은행,카카오뱅크,케이뱅크,토스뱅크,SC제일은행에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 재기 의지가 있는 영세 개인사업자에게 사업 운전자금을 지원에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": [
+    {
+     "servSeCode": "010",
+     "servSeDetailLink": "1397",
+     "servSeDetailNm": "서민금융진흥원"
+    },
+    {
+     "servSeCode": "010",
+     "servSeDetailNm": "대출문의 : 협약은행 콜센터"
+    }
+   ],
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.kinfa.or.kr",
+    "servSeDetailNm": "서민금융진흥원"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006267": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "3265",
+   "inqNum": "3317",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
    "lifeArray": "청소년,청년,중장년,노년",
@@ -13111,13 +13600,84 @@
    "srvPvsnNm": "프로그램/서비스(서비스)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006267",
+   "servNm": "서민금융진흥원 금융교육",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "정책서민금융이용자, 취약계층(자활참여자, 북한이탈주민, 다문화가정, 장애인, 자립준비청년 등), 청년·대학생, 고령층, 군장병 등을 대상으로 지원합니다.",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "서민·취약계층, 청년·대학생, 고령층 둥에 대한 금융교육\n서민 접점의 상담종사자 및 강사 양성교육",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "서민·취약계층을 포함한 금융소비자가 금융역량을 강화하여 합리적인 금융의사결정을 하도록 지원합니다.",
+   "sprtCycNm": "수시",
+   "srvPvsnNm": "프로그램/서비스(서비스)",
+   "lifeArray": "청년, 청소년, 노년, 중장년",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 서민금융진흥원에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융진흥원 금융교육포털"
+   },
+   "inqplHmpgReldList": [
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "https://edu.kinfa.or.kr",
+     "servSeDetailNm": "서민금융진흥원 금융교육포털"
+    },
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "https://loan.kinfa.or.kr",
+     "servSeDetailNm": "서민금융 잇다"
+    },
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "https://www.kinfa.or.kr",
+     "servSeDetailNm": "서민금융진흥원"
+    }
+   ],
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006269": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "14192",
+   "inqNum": "14278",
    "intrsThemaArray": "일자리",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13132,13 +13692,80 @@
    "srvPvsnNm": "현금대여(융자)",
    "svcfrstRegTs": "20260506"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006269",
+   "servNm": "미소금융",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "차상위계층 이하 또는 개인신용평점 하위 20% 이하 또는 근로장려금 신청대상자로 제도권 금융기관 이용이 어려운 자영업자, 금융취약계층, 청년(만 19세이상~만 34세 이하)을 대상으로 지원합니다.\n청년 : 만 34세 이하의 청년 또는 사회초년생(중소기업 1년 이하 재직자) 또는 개인사업자(창업 1년 이내인 자)이하\n대출신청일 현재 국민기초생활보장법 제2조에 따른 수급권자 및 차상위 계층에 해당하는 자\n조세특혜제한법 제100조의 3에 따른 근로장려금 신청자격 요건에 해당하는 자\n신용평점 하위 20% 이하로 저소득, 저신용 계층에 해당하는 자\n지원제외대상\n한국신용정보원의「신용정보관리규약」에 따른 연체, 대위변제·대지급, 부도정보, 금융질서문란정보, 공공정보를 보유한 자\n「채무자 회생 및 파산에 관한 법률」에 의해 회생절차, 파산절차 및 개인회생절차 개시의 신청이 있거나 그 절차가 진행중인 자",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "제도권 금융기관을 이용하기 어려운 저신용·저소득 영세자영업자 및 청년·금융취약계층에게 서민금융진흥원의 사업수행기관(미소 사업수행기관 38개)을 통한 자금 공급",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "저신용·저소득 영세자영업자 및 청년·금융취약계층의 금융애로를 해소하여 향후 제도권 금융으로 안착할 수 있도록 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "현금대여(융자)",
+   "lifeArray": "청년, 노년, 중장년",
+   "intrsThemaArray": "일자리",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 전국 미소금융 사업수행기관 38개에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전국 미소금융 사업수행기관 38개에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융콜센터"
+   },
+   "inqplHmpgReldList": [
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "www.kinfa.or.kr",
+     "servSeDetailNm": "서민금융진흥원"
+    },
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "https://loan.kinfa.or.kr",
+     "servSeDetailNm": "서민금융 잇다"
+    }
+   ],
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006268": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "18134",
+   "inqNum": "18409",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "금융위원회",
    "jurOrgNm": "서민금융과",
@@ -13154,13 +13781,81 @@
    "svcfrstRegTs": "20260506",
    "trgterIndvdlArray": "저소득"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006268",
+   "servNm": "불법사금융예방대출",
+   "jurMnofNm": "금융위원회 서민금융과",
+   "tgtrDtlCn": "신용평점 하위 20%이면서 연소득 3,500만원 이하인 자 ※ 불법사금융예방대출 전용 금융교육 이수 또는 보건복지부 복지멤버십 가입 필수\n지원제외대상 - 한국신용정보원에 체납정보, 금융질서문란정보가 등재된 자",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "1인당 최대 1백만원 한도 내 지원\n - 연체자의 경우 기본 50만원 + 추가 50만원(6회차 이상 성실상환 시) ※ 연체자는 특정용도(의료·주거·교육비) 증빙 시 최대 100만원 內 대출 가능",
+   "crtrYr": "2026",
+   "rprsCtadr": "1397",
+   "wlfareInfoOutlCn": "불법사금융에 노출되기 쉬운 저신용·저소득 금융취약계층의 대출수요를 정책서민금융으로 흡수하기 위해 소액의 생계비를 긴급하게 지원합니다.",
+   "sprtCycNm": "1회성",
+   "srvPvsnNm": "현금대여(융자)",
+   "lifeArray": "중장년, 노년, 청년",
+   "trgterIndvdlArray": "저소득",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 서민금융진흥원에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 서민금융진흥원에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1397",
+    "servSeDetailNm": "서민금융콜센터"
+   },
+   "inqplHmpgReldList": [
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "www.kinfa.or.kr",
+     "servSeDetailNm": "서민금융진흥원"
+    },
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "https://loan.kinfa.or.kr",
+     "servSeDetailNm": "서민금융 잇다"
+    }
+   ],
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "서민의 금융생활 지원에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006263": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "12678",
+   "inqNum": "12745",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "국민연금정책과",
@@ -13175,13 +13870,73 @@
    "srvPvsnNm": "감면",
    "svcfrstRegTs": "20260423"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006263",
+   "servNm": "저소득 지역가입자 보험료 지원",
+   "jurMnofNm": "보건복지부 국민연금정책과",
+   "tgtrDtlCn": "국민연금 지역가입자가 일정 수준의 재산 및 소득기준을 충족한 경우 지원대상이 되며 1인당 생애 최대 12개월까지 지원됩니다.\n(재산) 과세표준 6억원 미만\n(소득) 종합소득 연 1,680만원 미만(사업+근로소득 제외)\n(기준소득월액) 80만원 미만",
+   "slctCritCn": "지원대상의 내용을 참고해 주시기 바랍니다.",
+   "alwServCn": "연금보험료의 50%를 지원합니다. 지원방법은 가입자가 매월 납부할 연금보험료에서 지원금액을 공제한 후 고지합니다.",
+   "crtrYr": "2026",
+   "rprsCtadr": "1355",
+   "wlfareInfoOutlCn": "경제적으로 취약한 저소득 지역가입자에 대해 국민연금 보험료의 일부를 지원하여, 국민연금 가입 기간 확보 및 지속 납입 독려를 통한 노후 소득의 보장을 강화합니다.",
+   "sprtCycNm": "월",
+   "srvPvsnNm": "감면",
+   "lifeArray": "중장년, 노년, 청년",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 국민연금공단에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민연금공단에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민연금공단에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민연금공단에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민연금공단에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1355",
+    "servSeDetailNm": "국민연금공단"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "https://www.nps.or.kr",
+    "servSeDetailNm": "국민연금공단"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "국민연금법"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006258": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "18238",
+   "inqNum": "18422",
    "intrsThemaArray": "신체건강,생활지원,보호·돌봄",
    "jurMnofNm": "보건복지부",
    "jurOrgNm": "보험정책과",
@@ -13196,13 +13951,78 @@
    "srvPvsnNm": "기타",
    "svcfrstRegTs": "20260413"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006258",
+   "servNm": "건강보험 임의계속가입제도",
+   "jurMnofNm": "보건복지부 보험정책과",
+   "tgtrDtlCn": "사용관계가 끝난 사람 중 퇴직 이전 18개월 기간 동안 직장가입자로서의 자격을 유지한 기간이 통상 1년(365일) 이상인 지역 가입자(제외-개인대표자)를 지원합니다. * (제외) 개인대표자(공동대표자 포함)",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "실업자의 임의계속보험료(퇴직전 직장에서 부담하던 수준의 보험료)가 지역보험료 보다 적은 경우 임의계속 보험료로 납부할수 있도록 특례 적용\n최대 36개월 동안은 지역보험료 대신 임의계속보험료로 납부할 수있습니다.",
+   "crtrYr": "2026",
+   "rprsCtadr": "1577-1000",
+   "wlfareInfoOutlCn": "실업자에 대한 경제적 부담을 완화하고자 임의계속보험료가 지역보험료보다 적은 경우 임의계속보험료를 납부할 수 있도록 하는 특례 제도입니다.",
+   "sprtCycNm": "수시",
+   "srvPvsnNm": "기타",
+   "lifeArray": "청년, 노년, 중장년",
+   "intrsThemaArray": "신체건강, 생활지원, 보호·돌봄",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 국민건강보험공단에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민건강보험공단에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민건강보험공단에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 국민건강보험공단에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민건강보험공단에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 국민건강보험공단에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1577-1000",
+    "servSeDetailNm": "국민건강보험공단"
+   },
+   "inqplHmpgReldList": {
+    "servSeCode": "020",
+    "servSeDetailLink": "www.nhis.or.kr",
+    "servSeDetailNm": "국민건강보험공단"
+   },
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "국민건강보험법"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006245": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "2973",
+   "inqNum": "3010",
    "intrsThemaArray": "생활지원,안전·위기",
    "jurMnofNm": "해양수산부",
    "jurOrgNm": "소득복지과",
@@ -13218,13 +14038,290 @@
    "svcfrstRegTs": "20260410",
    "trgterIndvdlArray": "다자녀"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006245",
+   "servNm": "어업활동지원",
+   "jurMnofNm": "해양수산부 소득복지과",
+   "tgtrDtlCn": "사고, 질병, 임신, 출산 등으로 어업활동이 곤란한 어업인을 대상으로 지원합니다. *「수산업·어촌 발전 기본법」제3조 제3호에 따른 어업인으로 어업경영체에 등록된 어업인\n1주일 이상 진단을 받아 요양(통원치료 등)을 필요로 하는 경우로 병·의원 확인이 있는 경우\n3일 이상 입원한 경우\n임신부 및 출산 후 3개월이 지나지 않은 경우\n최근 3년 이내 4대 중증질환(암, 심장질환(고혈압 제외), 뇌혈관질환, 희귀난치성질환) 진단을 받은 자로 신청일 기준 최근 6개월 이내 통원치료를 받은 경우\n&lsquo;어업인 교육과정&rsquo;* 에 참여한 여성어업인(전체 지원한도의 20% 이내, 최종집행기관 기준) * 어업인 교육과정 : 해양수산부(소속기관 및 해수부 인가 어업인교육) 및 지방자치단체가 주관하는 1일(4시간) 이상 교육\n제1~2급 법정감염병 자가격리자로 보건소 및 의료기관으로부터 통보를 받아 격리중인 경우",
+   "slctCritCn": "지원대상의 내용을 참고해주시기 바랍니다.",
+   "alwServCn": "1일 최대 12만원 기준 9.6만원 지원, 연간 최대 30일 지원\n * 임금이 120,000원/일을 초과하는 경우 국고는 60,000원(지방비 36,000원)만 지원(차액은 자부담), 120,000원/일 미만인 경우는 국고에서 50% 지원(지방비 30%, 자부담 20%)\n** 임신부 및 출산의 경우와 4대 중증 질환일 경우 연간 60일 이내, 법정전염병 자가격리자는 세대당 정부지침에서 정하는 격리기간 이내 지원 *** 가구원(어업인) 다수가 질병 등으로 어업이 곤란한 경우 1일 최대 30명까지(어업이 곤란한 어업인 수 이내) 지원가능(30인&times;1일 또는 1인&times;30일)",
+   "crtrYr": "2026",
+   "rprsCtadr": "110",
+   "wlfareInfoOutlCn": "사고·질병, 교육, 임신 등으로 어업활동이 곤란한 어업인에게 영어활동을 유지할 수 있도록 어업을 대신할 인력 채용에 필요한 비용을 지원합니다.",
+   "sprtCycNm": "수시",
+   "srvPvsnNm": "프로그램/서비스(서비스)",
+   "lifeArray": "임신 · 출산, 노년, 청년, 중장년",
+   "trgterIndvdlArray": "다자녀",
+   "intrsThemaArray": "생활지원, 안전·위기",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 제주특별자치도 수산정책과에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 경상남도 수산안전기술원 에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 경상북도 해양수산과에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 전라남도 해양수산과학원에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 전북특별자치도 수산기술연구소에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 경기도 해양수산자원연구소에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 인천광역시 수산기술지원센터에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 부산광역시 수산자원연구소에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 부산광역시 수산자원연구소에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 인천광역시 수산기술지원센터에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경기도 해양수산자원연구소에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전북특별자치도 수산기술연구소에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전라남도 해양수산과학원에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상북도 해양수산과에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상남도 수산안전기술원 에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 제주특별자치도 수산정책과에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 부산광역시 수산자원연구소에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 인천광역시 수산기술지원센터에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경기도 해양수산자원연구소에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전북특별자치도 수산기술연구소에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전라남도 해양수산과학원에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상북도 해양수산과에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상남도 수산안전기술원 에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 제주특별자치도 수산정책과에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 제주특별자치도 수산정책과에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 경상남도 수산안전기술원 에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 경상북도 해양수산과에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 전라남도 해양수산과학원에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 전북특별자치도 수산기술연구소에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 경기도 해양수산자원연구소에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 인천광역시 수산기술지원센터에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "이의가 있을 경우, 담당 시/군/구청 또는 부산광역시 수산자원연구소에 이의 신청 접수",
+     "servSeDetailNm": "이의신청접수기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 부산광역시 수산자원연구소에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 인천광역시 수산기술지원센터에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경기도 해양수산자원연구소에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전북특별자치도 수산기술연구소에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전라남도 해양수산과학원에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상북도 해양수산과에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상남도 수산안전기술원 에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 제주특별자치도 수산정책과에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 제주특별자치도 수산정책과에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상남도 수산안전기술원 에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경상북도 해양수산과에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전라남도 해양수산과학원에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 전북특별자치도 수산기술연구소에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 경기도 해양수산자원연구소에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 인천광역시 수산기술지원센터에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 부산광역시 수산자원연구소에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "110",
+    "servSeDetailNm": "지자체 수산사무소"
+   },
+   "baslawList": [
+    {
+     "servSeCode": "030",
+     "servSeDetailNm": "여성농어업인 육성법"
+    },
+    {
+     "servSeCode": "030",
+     "servSeDetailNm": "농어업인 삶의 질 향상 및 농어촌지역 개발촉진에 관한 특별법"
+    }
+   ],
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  },
  "WLF00006238": {
   "firstSeen": "2026-11-03",
   "item": {
-   "inqNum": "8238",
+   "inqNum": "8319",
    "intrsThemaArray": "서민금융",
    "jurMnofNm": "고용노동부",
    "jurOrgNm": "고령사회인력정책과",
@@ -13239,7 +14336,74 @@
    "srvPvsnNm": "현금지급",
    "svcfrstRegTs": "20260402"
   },
-  "lastSeen": "2026-11-04",
-  "active": true
+  "lastSeen": "2026-11-06",
+  "active": true,
+  "detail": {
+   "servId": "WLF00006238",
+   "servNm": "고령자 계속고용장려금",
+   "jurMnofNm": "고용노동부 고령사회인력정책과",
+   "tgtrDtlCn": "정년에 도달한 근로자를 정년 이후에도 계속 고용하는 제도를 운영하는 사업주를 지원합니다.",
+   "slctCritCn": "지원금을 받고자 하는 사업주는 다음의 지원요건을 모두 충족하여야 합니다.\n1. 계속고용제도 시행일 이전 정년을 정하여 운영 중일 것\n2. 취업규칙, 단체협약 등 명시적인 노사 합의를 통해 다음 각 목의 어느 하나에 해당하는 계속고용제도를 운영 중일 것\n가. 정년의 1년 이상 연장\n나. 정년의 폐지\n다. 노사 합의로 정한 합리적 기준에 따라 결정된 자를 정년에 도달한 다음날로부터 6개월 이내에 1년 이상의 근로계약 체결하여 재고용\n3. 계속고용제도 시행일이 '22.7.1.이후부터 사업장 규모와 상관없이 60세 이상인 피보험자 수의 합이 100분의 30 이하일 것\n4. 2019년 1월 1일 이후에 계속고용제도를 도입·시행할 것",
+   "alwServCn": "계속 고용된 근로자 1인당 월 30만원씩 최대 3년간 총 1,080만원을 지원합니다.\n비수도권의 경우, '26년 1분기 지원대상부터 1인당 월 40만원씩 최대 3년간 총 1,440만원을 지원합니다.",
+   "crtrYr": "2026",
+   "rprsCtadr": "1350",
+   "wlfareInfoOutlCn": "정년에 도달한 근로자를 정년 이후에도 계속 고용하는 제도를 운영하는 사업주에게 비용의 일부를 지원하여 고령자가 주된 일자리에서 계속 근로할 수 있도록 하는 사업입니다.",
+   "sprtCycNm": "분기",
+   "srvPvsnNm": "현금지급",
+   "lifeArray": "중장년, 노년",
+   "intrsThemaArray": "서민금융",
+   "applmetList": [
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "거주지 읍/면/동 주민센터, 고용노동부 고용센터에서 ‘서비스 신청’",
+     "servSeDetailNm": "신청기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 고용노동부에서 조사 및 심사",
+     "servSeDetailNm": "조사기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 고용노동부에서 보장 결정",
+     "servSeDetailNm": "결정기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 고용노동부에서 대상자에게 서비스 제공",
+     "servSeDetailNm": "지급기관연락처목록"
+    },
+    {
+     "servSeCode": "070",
+     "servSeDetailLink": "담당 시/군/구청 또는 고용노동부에서 서비스 제공 이후 대상자의 상황 관리",
+     "servSeDetailNm": "사후관리기관목록"
+    }
+   ],
+   "inqplCtadrList": {
+    "servSeCode": "010",
+    "servSeDetailLink": "1350",
+    "servSeDetailNm": "고용노동부"
+   },
+   "inqplHmpgReldList": [
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "www.moel.go.kr",
+     "servSeDetailNm": "고용노동부"
+    },
+    {
+     "servSeCode": "020",
+     "servSeDetailLink": "www.work24.go.kr",
+     "servSeDetailNm": "고용24"
+    }
+   ],
+   "baslawList": {
+    "servSeCode": "030",
+    "servSeDetailNm": "고용상 연령차별금지 및 고령자고용촉진에 관한 법률"
+   },
+   "resultCode": "0",
+   "resultMessage": "SUCCESS"
+  },
+  "detailFor": "",
+  "detailAt": "2026-11-06"
  }
 }
