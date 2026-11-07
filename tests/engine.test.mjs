@@ -1,4 +1,4 @@
-// 실행: node --test tests/
+// 실행: npm test
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { judge, ageOn, incomePct } from '../docs/js/engine.js';

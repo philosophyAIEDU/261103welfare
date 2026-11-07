@@ -1,5 +1,5 @@
 // 서비스 워커: 오프라인 실행 + 하루 한 번 새 데이터 확인(지원 브라우저)
-const VERSION = 'hyodo-v1';
+const VERSION = 'hyodo-v2';
 const SHELL = [
   './',
   'index.html',
@@ -7,6 +7,7 @@ const SHELL = [
   'js/app.js',
   'js/engine.js',
   'js/store.js',
+  'js/needs.js',
   'manifest.webmanifest',
   'icons/icon.svg',
   'icons/icon-192.png',

@@ -12,6 +12,6 @@
     "update": "node scripts/fetch.mjs && node scripts/extract.mjs && node scripts/build.mjs",
     "icons": "node scripts/make-icons.mjs",
     "serve": "node scripts/serve.mjs",
-    "test": "node --test tests/engine.test.mjs"
+    "test": "node --test tests/engine.test.mjs tests/needs.test.mjs"
   }
 }

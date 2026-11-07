@@ -1,5 +1,6 @@
 import { judgeAll, ageOn, FIELD_LABELS, HOUSEHOLD_LABELS, todayStr } from './engine.js';
 import * as store from './store.js';
+import { NEEDS, NEED_LABELS, needsOf, matchedNeeds } from './needs.js';
 
 /* ---------------- 공통 도구 ---------------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -64,8 +65,17 @@ function resultsFor(elder) {
   return judgeAll(DATA.services, elder, DATA.standards);
 }
 
+/** 체크한 '도움이 필요한 분야'에 해당하는 복지를 앞으로 (같은 조건이면 원래 순서 유지) */
+function byNeeds(results, elder) {
+  if (!elder.needs?.length) return results;
+  return results
+    .map((r, i) => ({ r, i, n: matchedNeeds(r.service, elder.needs).length }))
+    .sort((a, b) => (b.n > 0) - (a.n > 0) || a.i - b.i)
+    .map((x) => x.r);
+}
+
 function categorize(elder) {
-  const results = resultsFor(elder);
+  const results = byNeeds(resultsFor(elder), elder);
   const actions = store.getActions(elder.id);
   const seen = store.getSeen(elder.id);
   const done = (r) => DONE.has(actions[r.service.id]?.status);
@@ -167,6 +177,7 @@ function renderHome() {
       return `<a class="elder-card" href="#/elder/${e.id}${c.new.length ? '?tab=new' : ''}">
         <div class="elder-head"><strong>${esc(e.nickname)}</strong>${c.new.length ? `<span class="badge new">새 소식 ${c.new.length}</span>` : ''}</div>
         <div class="muted">${esc([e.sido, e.sigungu].filter(Boolean).join(' '))}${age !== null ? ` · 만 ${age}세` : ''}</div>
+        ${e.needs?.length ? `<div class="need-tags">${e.needs.map((k) => `<span>${esc(NEED_LABELS[k] || k)}</span>`).join('')}</div>` : ''}
         <div class="counts">
           <span><b>${c.likely.length}</b>받을 가능성 높음</span>
           <span><b>${c.check.length}</b>확인 필요</span>
@@ -278,7 +289,14 @@ function renderElderForm(elder) {
       <label class="field">가구원 수 (본인 포함) <input name="householdSize" type="number" min="1" max="12" inputmode="numeric" value="${esc(e.householdSize)}" placeholder="예: 1"></label>
     </fieldset>
 
-    <fieldset><legend>4. 수급·소득 (아는 만큼)</legend>
+    <fieldset><legend>4. 도움이 필요한 부분 <small>(여러 개 선택 · 선택)</small></legend>
+      <p class="hint">${who}께 요즘 가장 필요한 도움을 골라 주세요. 해당 분야 복지를 맨 앞에 보여드려요.</p>
+      <div class="need-pick">${NEEDS.map(
+        (n) => `<label><input type="checkbox" name="needs" value="${n.key}" ${e.needs?.includes(n.key) ? 'checked' : ''}><span><b>${esc(n.label)}</b><small>${esc(n.desc)}</small></span></label>`,
+      ).join('')}</div>
+    </fieldset>
+
+    <fieldset><legend>5. 수급·소득 (아는 만큼)</legend>
       <div class="field">기초연금을 받고 계신가요? ${radios('basicPension', YNU, e.basicPension)}</div>
       <div class="field">기초생활수급자(생계·의료·주거급여)이신가요? ${radios('basicLivelihood', YNU, e.basicLivelihood)}</div>
       <div class="field">차상위계층이신가요? ${radios('nearPoor', YNU, e.nearPoor)}</div>
@@ -291,12 +309,12 @@ function renderElderForm(elder) {
       <p class="hint" id="income-hint">${incomeHint(e.householdSize || (e.household === 'couple' ? 2 : 1))}</p>
     </fieldset>
 
-    <fieldset><legend>5. 민감정보 (선택 · 별도 동의 필요)</legend>
+    <fieldset><legend>6. 민감정보 (선택 · 별도 동의 필요)</legend>
       <div class="field">등록 장애인이신가요? ${radios('disability', YNU, e.disability)}</div>
       <div class="field">국가유공자·보훈대상자이신가요? ${radios('veteran', YNU, e.veteran)}</div>
     </fieldset>
 
-    <fieldset class="consent"><legend>6. ${who} 동의</legend>
+    <fieldset class="consent"><legend>7. ${who} 동의</legend>
       <p>${who}의 정보를 등록하고 복지 알림을 받으려면 <b>${who} 본인(또는 법정대리인)의 동의</b>가 필요해요.
       정보는 이 기기에만 저장되고, 언제든 삭제할 수 있어요.</p>
       <div class="row2">
@@ -365,6 +383,7 @@ function renderElderForm(elder) {
       sigungu,
       residenceSince: v.residenceSince || '',
       household: v.household || '',
+      needs: new FormData(f).getAll('needs'),
       householdSize: v.householdSize ? Number(v.householdSize) : '',
       basicPension: v.basicPension || 'unknown',
       basicLivelihood: v.basicLivelihood || 'unknown',
@@ -390,7 +409,7 @@ function renderElderForm(elder) {
 
 /* ---------------- 어르신별 복지 목록 ---------------- */
 const PAGE = 40;
-let listState = { key: '', limit: PAGE, q: '' };
+let listState = { key: '', limit: PAGE, q: '', need: '' };
 
 function renderElder(id, tab) {
   const elder = store.getElder(id);
@@ -408,7 +427,7 @@ function renderElder(id, tab) {
   ];
   if (!tab || !tabs.some(([k]) => k === tab)) tab = c.new.length ? 'new' : 'likely';
   const key = `${id}:${tab}`;
-  if (listState.key !== key) listState = { key, limit: PAGE, q: '' };
+  if (listState.key !== key) listState = { key, limit: PAGE, q: '', need: listState.key.startsWith(`${id}:`) ? listState.need : '' };
 
   const age = ageOn(elder.birthDate);
   const missingCount = {};
@@ -431,23 +450,47 @@ function renderElder(id, tab) {
       ? `<div class="notice"><span>${topMissing.map(([f, n]) => `<b>${FIELD_LABELS[f] || f}</b>를 입력하면 ${n}건`).join(', ')}을 더 정확히 판정할 수 있어요. <a href="#/elder/${id}/edit">입력하기</a></span></div>`
       : ''
   }
+  ${
+    elder.needs?.length
+      ? ''
+      : `<div class="notice"><span><b>도움이 필요한 부분</b>(생계비·병원비·돌봄 등)을 체크하면 그 분야 복지를 먼저 보여드려요. <a href="#/elder/${id}/edit">체크하기</a></span></div>`
+  }
   <nav class="tabs" role="tablist">${tabs
     .map(([k, l, n]) => `<a role="tab" href="#/elder/${id}?tab=${k}" class="${k === tab ? 'on' : ''}" aria-selected="${k === tab}">${l} <span>${n}</span></a>`)
     .join('')}</nav>
+  <div class="chips" role="group" aria-label="분야로 보기" id="need-chips"></div>
   <div class="list-tools">
     <input type="search" id="q" placeholder="복지 이름으로 찾기" value="${esc(listState.q)}" aria-label="복지 검색">
     ${tab === 'new' && c.new.length ? `<button class="btn small" data-action="seen-all" data-id="${id}">모두 확인함</button>` : ''}
   </div>
   <div id="svc-list"></div>`;
 
+  // 분야 칩: 체크한 분야를 먼저, 나머지는 뒤에
+  const mine = elder.needs || [];
+  const order = [...mine, ...NEEDS.map((n) => n.key).filter((k) => !mine.includes(k))];
+  const drawChips = () => {
+    const count = (k) => c[tab].filter((r) => needsOf(r.service).includes(k)).length;
+    $('#need-chips').innerHTML =
+      `<button class="chip ${listState.need ? '' : 'on'}" data-action="need" data-need="">전체 <span>${c[tab].length}</span></button>` +
+      order
+        .map((k) => {
+          const n = count(k);
+          if (!n && !mine.includes(k)) return '';
+          return `<button class="chip ${listState.need === k ? 'on' : ''} ${mine.includes(k) ? 'mine' : ''}" data-action="need" data-need="${k}" aria-pressed="${listState.need === k}">${mine.includes(k) ? '★ ' : ''}${esc(NEED_LABELS[k])} <span>${n}</span></button>`;
+        })
+        .join('');
+  };
   const drawList = () => {
+    drawChips();
     const q = listState.q.trim();
-    const items = c[tab].filter((r) => !q || r.service.name.includes(q) || (r.service.easy || '').includes(q));
+    const items = c[tab]
+      .filter((r) => !listState.need || needsOf(r.service).includes(listState.need))
+      .filter((r) => !q || r.service.name.includes(q) || (r.service.easy || '').includes(q));
     const shown = items.slice(0, listState.limit);
     $('#svc-list').innerHTML = items.length
       ? shown.map((r) => serviceCard(elder, r)).join('') +
         (items.length > shown.length ? `<button class="btn ghost wide" data-action="more">더 보기 (${items.length - shown.length}건 남음)</button>` : '')
-      : `<p class="empty">${emptyText(tab)}</p>`;
+      : `<p class="empty">${listState.need ? `이 목록에는 '${esc(NEED_LABELS[listState.need])}' 분야 복지가 없어요. 다른 탭도 확인해 보세요.` : emptyText(tab)}</p>`;
   };
   drawList();
   $('#q').addEventListener('input', (ev) => {
@@ -481,6 +524,7 @@ function serviceCard(elder, r) {
   const action = store.getActions(elder.id)[s.id]?.status;
   const isNew = !store.getSeen(elder.id).has(s.id);
   const where = s.src === 'L' ? [s.ctpv, s.sgg].filter(Boolean).join(' ') : '전국';
+  const needHit = matchedNeeds(s, elder.needs);
   const pill = r.status === 'likely' ? '<span class="pill ok">받을 가능성 높음</span>' : '<span class="pill warn">확인 필요</span>';
   const icon = (ok) => (ok === true ? '<i class="ok" aria-label="충족">✓</i>' : ok === false ? '<i class="fail" aria-label="미충족">✕</i>' : '<i class="unk" aria-label="확인 필요">?</i>');
   const careBtns = isCareWorker()
@@ -490,7 +534,7 @@ function serviceCard(elder, r) {
   return `<article class="svc ${r.status}">
     <details>
       <summary>
-        <div class="svc-head">${pill}${isNew ? '<span class="badge new">새</span>' : ''}${action ? `<span class="badge">${ACTION_LABELS[action]}</span>` : ''}</div>
+        <div class="svc-head">${pill}${isNew ? '<span class="badge new">새</span>' : ''}${action ? `<span class="badge">${ACTION_LABELS[action]}</span>` : ''}${needHit.map((k) => `<span class="badge need">${esc(NEED_LABELS[k])}</span>`).join('')}</div>
         <h3>${esc(s.name)}</h3>
         <p class="easy">${esc(s.easy)}</p>
         <p class="meta">${esc(where)} · ${esc(s.org)}${s.cycle ? ` · ${esc(s.cycle)}` : ''}</p>
@@ -648,7 +692,7 @@ const b64url = {
     return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
   },
 };
-const SHARE_FIELDS = ['nickname', 'birthDate', 'gender', 'sido', 'sigungu', 'residenceSince', 'household', 'householdSize', 'basicPension', 'basicLivelihood', 'nearPoor', 'ltcGrade', 'incomeMonthly', 'disability', 'veteran', 'consent'];
+const SHARE_FIELDS = ['nickname', 'birthDate', 'gender', 'sido', 'sigungu', 'residenceSince', 'household', 'householdSize', 'needs', 'basicPension', 'basicLivelihood', 'nearPoor', 'ltcGrade', 'incomeMonthly', 'disability', 'veteran', 'consent'];
 
 function inviteLink(elder) {
   const data = Object.fromEntries(SHARE_FIELDS.map((k) => [k, elder[k]]));
@@ -724,6 +768,10 @@ document.addEventListener('click', async (ev) => {
     const c = categorize(store.getElder(id));
     store.markSeen(id, c.new.map((r) => r.service.id));
     location.hash = `#/elder/${id}?tab=likely`;
+  } else if (action === 'need') {
+    listState.need = el.dataset.need;
+    listState.limit = PAGE;
+    renderElder.drawList?.();
   } else if (action === 'more') {
     listState.limit += PAGE;
     renderElder.drawList?.();
