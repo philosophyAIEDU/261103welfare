@@ -1,0 +1,16 @@
+# Netlify 배포 설정: 앱 파일은 저장소 루트가 아니라 docs/ 폴더에 있습니다.
+# 데이터(docs/data/*.json)는 GitHub Actions가 매일 만들어 커밋하므로 Netlify에서 빌드할 것은 없습니다.
+[build]
+  publish = "docs"
+  command = ""
+
+# 서비스 워커와 데이터는 항상 최신본을 받도록 캐시하지 않습니다.
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "no-cache"
