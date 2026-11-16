@@ -17,9 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 120
     env:
-      # 비밀값은 Settings → Secrets and variables → Actions → Secrets 에 등록
-      DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      # 비밀값(API 키)은 필요한 단계에만 넘깁니다. (아래 1)·2) 단계의 env)
       # 선택 설정은 같은 화면의 Variables 탭 (비워 두면 기본값)
       GEMINI_MODEL_PRIMARY: ${{ vars.GEMINI_MODEL_PRIMARY }}
       GEMINI_MODEL_LITE: ${{ vars.GEMINI_MODEL_LITE }}
@@ -37,13 +35,18 @@ jobs:
           node-version: 22
 
       - name: 엔진 테스트
-        run: node --test tests/engine.test.mjs
+        run: node --test tests/*.test.mjs
 
       - name: 1) 복지서비스 수집 (한국사회보장정보원 API)
         run: node scripts/fetch.mjs
+        env:
+          # 비밀값은 Settings → Secrets and variables → Actions → Secrets 에 등록
+          DATA_GO_KR_KEY: ${{ secrets.DATA_GO_KR_KEY }}
 
       - name: 2) 자격요건 AI 분석 (Gemini 무료 티어)
         run: node scripts/extract.mjs
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: 3) 앱 데이터 생성
         run: node scripts/build.mjs

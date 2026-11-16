@@ -8,6 +8,15 @@ const clip = (s, n) => {
   const t = (s || '').replace(/[ \t]+/g, ' ').replace(/\n{2,}/g, '\n').trim();
   return t.length > n ? t.slice(0, n) + '…' : t;
 };
+// http(s) 링크만 앱으로 내보냄 (javascript: 같은 링크 차단)
+const httpUrl = (u) => {
+  try {
+    const url = new URL(String(u || '').trim());
+    return ['http:', 'https:'].includes(url.protocol) ? url.href : '';
+  } catch {
+    return '';
+  }
+};
 const isSidoWide = (sgg) => !sgg || sgg === '-' || /교육청/.test(sgg);
 
 function main() {
@@ -37,9 +46,9 @@ function main() {
       benefit: clip(s.benefitText, 300),
       apply: clip(s.applyText, 300),
       contacts: s.contacts.slice(0, 4),
-      forms: s.forms.slice(0, 3),
+      forms: s.forms.map((f) => ({ name: f.name, url: httpUrl(f.url) })).filter((f) => f.url).slice(0, 3),
       laws: s.laws.slice(0, 2),
-      link: s.link,
+      link: httpUrl(s.link),
       start: s.start,
       end: s.end,
       firstSeen: s.firstSeen,

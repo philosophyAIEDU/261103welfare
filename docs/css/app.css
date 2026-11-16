@@ -114,6 +114,12 @@ main { max-width: 1080px; margin: 0 auto; padding: 20px 16px 48px; outline: none
 .role-card { display: flex; flex-direction: column; gap: 4px; padding: 22px; color: var(--ink); text-decoration: none; }
 .role-card strong { font-size: 1.2rem; color: var(--brand); }
 .role-card:hover, .elder-card:hover { border-color: var(--brand); }
+.role-card.self { background: var(--brand-soft); border-color: var(--brand); }
+.role-card.self strong { font-size: 1.35rem; }
+
+/* 누구의 정보인지에 따라 보이는 문구 (본인 등록 / 보호자 등록) */
+.form.subject-self .only-guardian, .form.subject-guardian .only-self { display: none !important; }
+.seg input:disabled + span { opacity: 0.45; cursor: not-allowed; }
 
 .elder-card { display: block; padding: 18px; color: var(--ink); text-decoration: none; }
 .elder-card.add { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 140px; color: var(--muted); border-style: dashed; font-weight: 700; }
@@ -205,7 +211,7 @@ input[type='text'], input:not([type]), input[type='date'], input[type='month'], 
 
 /* 태블릿·PC */
 @media (min-width: 640px) {
-  .role-grid { grid-template-columns: repeat(3, 1fr); }
+  .role-grid { grid-template-columns: repeat(2, 1fr); }
   .elder-grid { grid-template-columns: repeat(2, 1fr); }
   .row2 { grid-template-columns: 1fr 1fr; }
   .form { max-width: 760px; margin-left: auto; margin-right: auto; }

@@ -10,13 +10,23 @@ const port = Number(process.env.PORT || 8080);
 
 http
   .createServer((req, res) => {
-    const url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-    let file = path.join(DOCS, url.endsWith('/') ? url + 'index.html' : url);
-    if (!file.startsWith(DOCS)) return res.writeHead(403).end();
+    let url;
+    try {
+      url = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+    } catch {
+      return res.writeHead(400).end();
+    }
+    const file = path.join(DOCS, url.endsWith('/') ? url + 'index.html' : url);
+    // docs 폴더 밖(예: /../docs-other, /../scripts) 접근 차단
+    if (file !== DOCS && !file.startsWith(DOCS + path.sep)) return res.writeHead(403).end();
     fs.readFile(file, (err, buf) => {
       if (err) return res.writeHead(404).end('not found');
-      res.writeHead(200, { 'content-type': (TYPES[path.extname(file)] || 'application/octet-stream') + '; charset=utf-8' });
+      res.writeHead(200, {
+        'content-type': (TYPES[path.extname(file)] || 'application/octet-stream') + '; charset=utf-8',
+        'x-content-type-options': 'nosniff',
+        'cache-control': 'no-cache',
+      });
       res.end(buf);
     });
   })
-  .listen(port, () => console.log(`http://localhost:${port}`));
+  .listen(port, '127.0.0.1', () => console.log(`http://localhost:${port}`));

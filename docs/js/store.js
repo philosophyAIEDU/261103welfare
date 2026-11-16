@@ -1,4 +1,6 @@
 // 모든 개인정보는 이 기기(브라우저) 안에만 저장됩니다. 서버로 보내지 않습니다.
+import { sanitizeState, isValidId } from './profile.js';
+
 const KEY = 'hyodo.v1';
 
 const empty = () => ({
@@ -15,8 +17,7 @@ function load() {
   try {
     const raw = localStorage.getItem(KEY);
     if (!raw) return empty();
-    const s = JSON.parse(raw);
-    return { ...empty(), ...s, settings: { ...empty().settings, ...s.settings } };
+    return sanitizeState(JSON.parse(raw), empty);
   } catch {
     return empty();
   }
@@ -40,6 +41,7 @@ export function updateSettings(patch) {
 export const getElder = (id) => state.elders.find((e) => e.id === id);
 
 export function saveElder(elder) {
+  if (!isValidId(elder?.id)) throw new Error('잘못된 어르신 정보입니다.');
   const i = state.elders.findIndex((e) => e.id === elder.id);
   if (i >= 0) state.elders[i] = elder;
   else state.elders.push(elder);
@@ -55,6 +57,7 @@ export function deleteElder(id) {
 }
 
 export function setAction(elderId, servId, status) {
+  if (!getElder(elderId)) return;
   const a = (state.actions[elderId] ??= {});
   if (!status) delete a[servId];
   else a[servId] = { status, at: new Date().toISOString() };
@@ -64,6 +67,7 @@ export function setAction(elderId, servId, status) {
 export const getActions = (elderId) => state.actions[elderId] || {};
 
 export function markSeen(elderId, ids) {
+  if (!getElder(elderId)) return;
   const set = new Set(state.seen[elderId] || []);
   ids.forEach((id) => set.add(id));
   state.seen[elderId] = [...set];
@@ -73,6 +77,7 @@ export function markSeen(elderId, ids) {
 export const getSeen = (elderId) => new Set(state.seen[elderId] || []);
 
 export function markNotified(elderId, ids) {
+  if (!getElder(elderId)) return;
   const set = new Set(state.notified[elderId] || []);
   ids.forEach((id) => set.add(id));
   state.notified[elderId] = [...set];
@@ -86,16 +91,25 @@ export function exportAll() {
 }
 
 export function importAll(json) {
-  const s = JSON.parse(json);
-  if (s.app !== 'hyodo-alim') throw new Error('효도알림 백업 파일이 아닙니다.');
-  const { app, version, exportedAt, ...rest } = s;
-  state = { ...empty(), ...rest, settings: { ...empty().settings, ...rest.settings } };
+  let s;
+  try {
+    s = JSON.parse(json);
+  } catch {
+    throw new Error('백업 파일을 읽을 수 없습니다.');
+  }
+  if (s?.app !== 'hyodo-alim') throw new Error('효도알림 백업 파일이 아닙니다.');
+  state = sanitizeState(s, empty);
   save();
+  return state.elders.length;
 }
 
 export function clearAll() {
   state = empty();
-  localStorage.removeItem(KEY);
+  try {
+    localStorage.removeItem(KEY);
+  } catch {
+    /* 저장소 사용 불가 */
+  }
 }
 
 export const newId = () => 'e' + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);

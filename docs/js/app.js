@@ -1,5 +1,6 @@
 import { judgeAll, ageOn, FIELD_LABELS, HOUSEHOLD_LABELS, todayStr } from './engine.js';
 import * as store from './store.js';
+import { sanitizeElder, dropUnconsentedSensitive, safeUrl } from './profile.js';
 
 /* ---------------- 공통 도구 ---------------- */
 const $ = (s, r = document) => r.querySelector(s);
@@ -12,11 +13,16 @@ const ymd = (s) => (s && s.length === 8 ? `${s.slice(0, 4)}.${s.slice(4, 6)}.${s
 const app = $('#app');
 
 const ROLE = {
+  self: { label: '어르신 본인', title: '내', who: '본인' },
   family: { label: '자녀·가족', title: '부모님', who: '부모님' },
   supporter: { label: '생활지원사', title: '담당 어르신', who: '어르신' },
   caregiver: { label: '요양보호사', title: '담당 어르신', who: '어르신' },
 };
 const isCareWorker = () => ['supporter', 'caregiver'].includes(store.getState().settings.role);
+const isSelfUser = () => store.getState().settings.role === 'self';
+/** 어르신 본인이 직접 등록한 정보인지 (이 기기 사용자 = 어르신) */
+const isSelf = (e) => e?.subject === 'self';
+const hasSelfRecord = () => store.getState().elders.some(isSelf);
 
 const ACTION_LABELS = {
   applied: '신청 완료',
@@ -88,7 +94,7 @@ async function notifyNew() {
     const notified = store.getNotified(elder.id);
     const fresh = categorize(elder).new.filter((r) => !notified.has(r.service.id));
     if (!fresh.length) continue;
-    const title = `${elder.nickname}께 새 복지 ${fresh.length}건`;
+    const title = isSelf(elder) ? `받으실 수 있는 새 복지 ${fresh.length}건` : `${elder.nickname}께 새 복지 ${fresh.length}건`;
     const body = fresh
       .slice(0, 3)
       .map((r) => `· ${r.service.name}`)
@@ -122,13 +128,20 @@ function route() {
   if (DATA.error && parts[0] !== 'settings') return renderError();
   const [a, b, c] = parts;
   if (!a) return renderHome();
-  if (a === 'start' && b) {
-    store.updateSettings({ role: b });
-    location.hash = '#/elder/new';
+  if (a === 'start' && ROLE[b]) {
+    // 어르신 본인은 처음부터 글자를 크게
+    const patch = { role: b };
+    if (b === 'self' && store.getState().settings.fontScale === 'normal') patch.fontScale = 'large';
+    store.updateSettings(patch);
+    location.hash = b === 'self' ? '#/elder/new?for=self' : '#/elder/new';
     return;
   }
-  if (a === 'elder' && b === 'new') return renderElderForm(null);
-  if (a === 'elder' && b && c === 'edit') return renderElderForm(store.getElder(b));
+  if (a === 'elder' && b === 'new') return renderElderForm(null, query.get('for'));
+  if (a === 'elder' && b && c === 'edit') {
+    const e = store.getElder(b);
+    if (!e) return void (location.hash = '#/');
+    return renderElderForm(e);
+  }
   if (a === 'elder' && b) return renderElder(b, query.get('tab'));
   if (a === 'visits') return renderVisits();
   if (a === 'settings') return renderSettings();
@@ -152,7 +165,7 @@ function renderNav(current) {
 function renderError() {
   app.innerHTML = `<section class="panel"><h2>데이터를 불러오지 못했어요</h2>
   <p>인터넷 연결을 확인한 뒤 다시 시도해 주세요.</p><p class="muted">${esc(DATA.error)}</p>
-  <button class="btn" onclick="location.reload()">다시 시도</button></section>`;
+  <button class="btn" data-action="reload">다시 시도</button></section>`;
 }
 
 /* ---------------- 홈 ---------------- */
@@ -160,12 +173,14 @@ function renderHome() {
   const s = store.getState();
   if (!s.settings.role || !s.elders.length) return renderWelcome();
   const role = ROLE[s.settings.role] || ROLE.family;
+  const addLabel = isCareWorker() ? '어르신 추가' : isSelfUser() ? (hasSelfRecord() ? '배우자 등 가족 추가' : '내 정보 등록') : '부모님 추가';
+  const addHref = isSelfUser() && !hasSelfRecord() ? '#/elder/new?for=self' : '#/elder/new';
   const cards = s.elders
     .map((e) => {
       const c = categorize(e);
       const age = ageOn(e.birthDate);
-      return `<a class="elder-card" href="#/elder/${e.id}${c.new.length ? '?tab=new' : ''}">
-        <div class="elder-head"><strong>${esc(e.nickname)}</strong>${c.new.length ? `<span class="badge new">새 소식 ${c.new.length}</span>` : ''}</div>
+      return `<a class="elder-card" href="#/elder/${esc(e.id)}${c.new.length ? '?tab=new' : ''}">
+        <div class="elder-head"><strong>${esc(e.nickname)}</strong>${isSelf(e) ? '<span class="badge">본인</span>' : ''}${c.new.length ? `<span class="badge new">새 소식 ${c.new.length}</span>` : ''}</div>
         <div class="muted">${esc([e.sido, e.sigungu].filter(Boolean).join(' '))}${age !== null ? ` · 만 ${age}세` : ''}</div>
         <div class="counts">
           <span><b>${c.likely.length}</b>받을 가능성 높음</span>
@@ -176,29 +191,31 @@ function renderHome() {
     .join('');
   app.innerHTML = `
     <section class="hero">
-      <h1>${role.title} 복지, 놓치지 않게</h1>
+      <h1>${esc(role.title)} 복지, 놓치지 않게</h1>
       <p>${esc(role.label)}${s.settings.org ? ` · ${esc(s.settings.org)}` : ''} · 복지 정보 ${DATA.meta?.count?.toLocaleString() ?? 0}건 확인 중 · ${DATA.meta ? new Date(DATA.meta.updatedAt).toLocaleDateString('ko-KR') : ''} 갱신</p>
     </section>
     ${!s.settings.notify && 'Notification' in window ? `<div class="notice"><span>새 복지가 나오면 알려드릴까요?</span> <button class="btn small" data-action="enable-notify">알림 켜기</button></div>` : ''}
     <div class="elder-grid">${cards}
-      <a class="elder-card add" href="#/elder/new"><span class="plus">＋</span>${isCareWorker() ? '어르신 추가' : '부모님 추가'}</a>
+      <a class="elder-card add" href="${addHref}"><span class="plus">＋</span>${addLabel}</a>
     </div>`;
 }
 
 function renderWelcome() {
   app.innerHTML = `
   <section class="hero">
-    <h1>새 복지가 나오면,<br>부모님 대신 제가 알려드릴게요</h1>
-    <p>어르신이 직접 복지로를 찾지 않아도 됩니다. 부모님 정보를 한 번 등록하면 AI가 전국 복지사업을 매일 확인해서,
-    받으실 수 있는 복지를 자녀나 돌봄 선생님께 알려드립니다.</p>
+    <h1>새 복지가 나오면,<br>제가 먼저 알려드릴게요</h1>
+    <p>복지로를 일일이 찾아보지 않아도 됩니다. 어르신 정보를 한 번 등록하면 AI가 전국 복지사업을 매일 확인해서,
+    받으실 수 있는 복지를 어르신 본인이나 자녀, 돌봄 선생님께 알려드립니다.</p>
   </section>
   <h2 class="section-title">누구로 시작할까요?</h2>
   <div class="role-grid">
+    <a class="role-card self" href="#/start/self"><strong>어르신 본인</strong><span>내가 받을 수 있는 복지를 직접 확인해요</span></a>
     <a class="role-card" href="#/start/family"><strong>자녀·가족</strong><span>부모님 복지를 챙겨요</span></a>
     <a class="role-card" href="#/start/supporter"><strong>생활지원사</strong><span>노인맞춤돌봄 담당 어르신을 챙겨요</span></a>
     <a class="role-card" href="#/start/caregiver"><strong>요양보호사</strong><span>장기요양 담당 어르신을 챙겨요</span></a>
   </div>
-  <p class="muted center">가족이 없는 어르신은 생활지원사·요양보호사 선생님이 대신 등록할 수 있어요.<br>
+  <p class="muted center">어르신이 직접 등록하셔도 되고, 자녀가 대신 등록해도 돼요.<br>
+  가족이 없는 어르신은 생활지원사·요양보호사 선생님이 대신 등록할 수 있어요.<br>
   모든 정보는 이 기기 안에만 저장됩니다. <a href="#/about">개인정보 안내</a></p>`;
 }
 
@@ -209,11 +226,11 @@ function options(list, selected, placeholder) {
     list.map(([v, l]) => `<option value="${esc(v)}" ${String(v) === String(selected ?? '') ? 'selected' : ''}>${esc(l)}</option>`).join('')
   );
 }
-const radios = (name, list, selected) =>
+const radios = (name, list, selected, disabled = {}) =>
   `<div class="seg">${list
     .map(
       ([v, l]) =>
-        `<label><input type="radio" name="${name}" value="${v}" ${String(v) === String(selected ?? '') ? 'checked' : ''}><span>${l}</span></label>`,
+        `<label><input type="radio" name="${esc(name)}" value="${esc(v)}" ${String(v) === String(selected ?? '') ? 'checked' : ''} ${disabled[v] ? 'disabled' : ''}><span>${esc(l)}</span></label>`,
     )
     .join('')}</div>`;
 const YNU = [
@@ -243,23 +260,44 @@ function incomeHint(size) {
   기초연금 선정기준액: 혼자 사시면 ${won(st.basicPension.single)}, 부부는 ${won(st.basicPension.couple)} 이하`;
 }
 
-function renderElderForm(elder) {
+function renderElderForm(elder, forParam) {
   const s = store.getState();
   if (!s.settings.role) {
     location.hash = '#/';
     return;
   }
+  // 누구의 정보인지: 수정이면 저장된 값, 새 등록이면 링크(?for=self) 또는 역할로 정함
+  const otherSelf = s.elders.some((x) => isSelf(x) && x.id !== elder?.id); // 본인 정보는 한 기기에 하나만
+  let subject = elder ? elder.subject || 'guardian' : forParam === 'self' || (isSelfUser() && forParam !== 'guardian') ? 'self' : 'guardian';
+  if (subject === 'self' && otherSelf) subject = 'guardian';
+  const showSubject = !isCareWorker() && !(elder && subject === 'guardian' && otherSelf);
+
   const e = elder || { household: '', householdSize: '', basicPension: 'unknown', basicLivelihood: 'unknown', nearPoor: 'unknown', ltcGrade: 'unknown', disability: 'unknown', veteran: 'unknown' };
-  const who = ROLE[s.settings.role]?.who || '어르신';
+  const who = isSelfUser() ? '어르신' : ROLE[s.settings.role]?.who || '어르신';
   const sidoList = Object.keys(regions());
   const sggCustom = e.sigungu && !(regions()[e.sido] || []).includes(e.sigungu);
+  const selfConsent = subject === 'self' && e.consent;
+  const guardianConsent = subject === 'guardian' && e.consent;
   app.innerHTML = `
-  <form id="elder-form" class="panel form" novalidate>
-    <h2>${elder ? `${esc(elder.nickname)} 정보 수정` : `${who} 등록`}</h2>
+  <form id="elder-form" class="panel form subject-${subject}" novalidate>
+    <h2>${
+      elder
+        ? `${esc(elder.nickname)} 정보 수정`
+        : `<span class="only-self">내 정보 등록</span><span class="only-guardian">${esc(who)} 등록</span>`
+    }</h2>
     <p class="muted">아는 만큼만 입력하세요. 모르는 항목은 '모름'으로 두면 '확인 필요'로 안내해 드려요.</p>
 
+    ${
+      showSubject
+        ? `<fieldset><legend>누구의 정보인가요?</legend>
+      ${radios('subject', [['self', otherSelf ? '내 정보 (이미 등록됨)' : '내 정보 (어르신 본인)'], ['guardian', isSelfUser() ? '배우자 등 다른 분 정보' : `${who} 정보 (대신 등록)`]], subject, { self: otherSelf })}
+    </fieldset>`
+        : ''
+    }
+
     <fieldset><legend>1. 기본 정보</legend>
-      <label class="field">부르는 이름 <input name="nickname" required maxlength="20" placeholder="예: 어머니, 김○○ 어르신" value="${esc(e.nickname)}"></label>
+      <label class="field"><span class="only-self">화면에 보일 이름</span><span class="only-guardian">부르는 이름</span>
+        <input name="nickname" required maxlength="20" autocomplete="off" placeholder="${subject === 'self' ? '예: 홍길동, 나' : '예: 어머니, 김○○ 어르신'}" value="${esc(e.nickname)}"></label>
       <label class="field">생년월일 <input name="birthDate" type="date" required min="1900-01-01" max="${todayStr()}" value="${esc(e.birthDate)}"></label>
       <div class="field">성별 ${radios('gender', [['female', '여성'], ['male', '남성']], e.gender)}</div>
     </fieldset>
@@ -269,8 +307,8 @@ function renderElderForm(elder) {
         <label class="field">시·도 <select name="sido" required>${options(sidoList.map((x) => [x, x]), e.sido, '시·도 선택')}</select></label>
         <label class="field">시·군·구 <select name="sigunguSel">${sggOptions(e.sido, e.sigungu)}</select></label>
       </div>
-      <label class="field ${sggCustom ? '' : 'hidden'}" id="sgg-custom">시·군·구 직접 입력 <input name="sigunguCustom" placeholder="예: 종로구" value="${sggCustom ? esc(e.sigungu) : ''}"></label>
-      <label class="field">지금 주소로 이사 온 시기 <small>(선택 · '○년 이상 거주' 조건 판정용)</small><input name="residenceSince" type="month" value="${esc(e.residenceSince)}"></label>
+      <label class="field ${sggCustom ? '' : 'hidden'}" id="sgg-custom">시·군·구 직접 입력 <input name="sigunguCustom" maxlength="20" placeholder="예: 종로구" value="${sggCustom ? esc(e.sigungu) : ''}"></label>
+      <label class="field">지금 주소로 이사 온 시기 <small>(선택 · '○년 이상 거주' 조건 판정용)</small><input name="residenceSince" type="month" min="1900-01" max="${todayStr().slice(0, 7)}" value="${esc(e.residenceSince)}"></label>
     </fieldset>
 
     <fieldset><legend>3. 함께 사는 가족</legend>
@@ -287,7 +325,7 @@ function renderElderForm(elder) {
         e.ltcGrade,
       )}</select></label>
       <label class="field">월 소득인정액 (대략, 만원) <small>(모르면 비워 두세요)</small>
-        <input name="incomeManwon" type="number" min="0" step="1" inputmode="numeric" value="${e.incomeMonthly ? Math.round(e.incomeMonthly / 10000) : ''}" placeholder="예: 120"></label>
+        <input name="incomeManwon" type="number" min="0" max="100000" step="1" inputmode="numeric" value="${e.incomeMonthly !== '' && e.incomeMonthly != null ? Math.round(e.incomeMonthly / 10000) : ''}" placeholder="예: 120"></label>
       <p class="hint" id="income-hint">${incomeHint(e.householdSize || (e.household === 'couple' ? 2 : 1))}</p>
     </fieldset>
 
@@ -296,28 +334,43 @@ function renderElderForm(elder) {
       <div class="field">국가유공자·보훈대상자이신가요? ${radios('veteran', YNU, e.veteran)}</div>
     </fieldset>
 
-    <fieldset class="consent"><legend>6. ${who} 동의</legend>
-      <p>${who}의 정보를 등록하고 복지 알림을 받으려면 <b>${who} 본인(또는 법정대리인)의 동의</b>가 필요해요.
+    <fieldset class="consent only-self"><legend>6. 본인 동의</legend>
+      <p>입력한 정보는 <b>이 기기에만</b> 저장되고 서버로 보내지 않아요. 언제든 '삭제'로 지울 수 있어요.
+      자녀에게도 알리고 싶으시면 등록한 뒤 <b>'가족과 함께 보기'</b>로 링크를 보내세요.</p>
+      <label class="check"><input type="checkbox" name="consentSelf" ${selfConsent ? 'checked' : ''}> 내 정보를 이 기기에 저장하고 복지 알림을 받는 데 동의합니다.</label>
+      <label class="check"><input type="checkbox" name="consentSelfSensitive" ${selfConsent && e.consent.sensitive ? 'checked' : ''}> 장애·보훈 정보(민감정보)를 입력하는 데에도 동의합니다.</label>
+    </fieldset>
+
+    <fieldset class="consent only-guardian"><legend>6. ${esc(who)} 동의</legend>
+      <p>${esc(who)}의 정보를 등록하고 복지 알림을 받으려면 <b>${esc(who)} 본인(또는 법정대리인)의 동의</b>가 필요해요.
       정보는 이 기기에만 저장되고, 언제든 삭제할 수 있어요.</p>
       <div class="row2">
         <label class="field">동의 받은 방법 <select name="consentMethod">${options(
           [['phone', '전화'], ['sms', '문자'], ['inPerson', '직접 만나서'], ['guardian', '법정대리인 동의']],
-          e.consent?.method || 'phone',
+          guardianConsent ? e.consent.method : 'phone',
         )}</select></label>
         <div class="field"><span>동의 요청 문자</span><a class="btn ghost" id="sms-consent" href="#">문자 보내기</a></div>
       </div>
-      <label class="check"><input type="checkbox" name="consent" ${e.consent ? 'checked' : ''}> ${who}께 정보 등록과 복지 알림에 대한 동의를 받았습니다.</label>
-      <label class="check"><input type="checkbox" name="consentSensitive" ${e.consent?.sensitive ? 'checked' : ''}> 장애·보훈 정보(민감정보) 입력에 대해서도 별도로 동의를 받았습니다.</label>
+      <label class="check"><input type="checkbox" name="consent" ${guardianConsent ? 'checked' : ''}> ${esc(who)}께 정보 등록과 복지 알림에 대한 동의를 받았습니다.</label>
+      <label class="check"><input type="checkbox" name="consentSensitive" ${guardianConsent && e.consent.sensitive ? 'checked' : ''}> 장애·보훈 정보(민감정보) 입력에 대해서도 별도로 동의를 받았습니다.</label>
     </fieldset>
 
     <div class="form-actions">
-      ${elder ? `<button type="button" class="btn danger ghost" data-action="delete-elder" data-id="${elder.id}">삭제</button>` : ''}
-      <a class="btn ghost" href="${elder ? `#/elder/${elder.id}` : '#/'}">취소</a>
+      ${elder ? `<button type="button" class="btn danger ghost" data-action="delete-elder" data-id="${esc(elder.id)}">삭제</button>` : ''}
+      <a class="btn ghost" href="${elder ? `#/elder/${esc(elder.id)}` : '#/'}">취소</a>
       <button class="btn primary" type="submit">${elder ? '저장' : '등록하고 복지 찾기'}</button>
     </div>
   </form>`;
 
   const f = $('#elder-form');
+  const currentSubject = () => (showSubject ? f.querySelector('input[name=subject]:checked')?.value || subject : subject);
+  $$('input[name=subject]', f).forEach((r) =>
+    r.addEventListener('change', () => {
+      f.classList.toggle('subject-self', r.value === 'self');
+      f.classList.toggle('subject-guardian', r.value !== 'self');
+      f.nickname.placeholder = r.value === 'self' ? '예: 홍길동, 나' : '예: 어머니, 김○○ 어르신';
+    }),
+  );
   f.sido.addEventListener('change', () => {
     f.sigunguSel.innerHTML = sggOptions(f.sido.value, '');
     $('#sgg-custom').classList.add('hidden');
@@ -343,21 +396,36 @@ function renderElderForm(elder) {
   f.addEventListener('submit', (ev) => {
     ev.preventDefault();
     const v = Object.fromEntries(new FormData(f));
+    const subj = currentSubject();
+    const self = subj === 'self';
+    if (self && otherSelf) return toast('본인 정보는 이미 등록되어 있어요.');
     const sigungu = v.sigunguSel === '__custom' ? (v.sigunguCustom || '').trim() : v.sigunguSel || '';
     const errs = [];
-    if (!v.nickname?.trim()) errs.push('부르는 이름');
+    if (!v.nickname?.trim()) errs.push(self ? '이름' : '부르는 이름');
     if (!v.birthDate) errs.push('생년월일');
     if (!v.sido) errs.push('시·도');
     if (!sigungu && (regions()[v.sido] || []).length) errs.push('시·군·구');
     if (errs.length) return toast(`${errs.join(', ')}을(를) 입력해 주세요.`);
-    if (!v.consent) return toast(`${who} 동의를 받은 뒤 체크해 주세요.`);
+    if (v.birthDate < '1900-01-01' || v.birthDate > todayStr()) return toast('생년월일을 다시 확인해 주세요.');
+    if (v.residenceSince && (v.residenceSince < v.birthDate.slice(0, 7) || v.residenceSince > todayStr().slice(0, 7))) return toast('이사 온 시기를 다시 확인해 주세요.');
+    const size = v.householdSize ? Number(v.householdSize) : '';
+    if (size !== '' && !(Number.isInteger(size) && size >= 1 && size <= 12)) return toast('가구원 수는 1~12명으로 입력해 주세요.');
+    const income = v.incomeManwon !== '' && v.incomeManwon != null ? Number(v.incomeManwon) : '';
+    if (income !== '' && !(Number.isFinite(income) && income >= 0 && income <= 100000)) return toast('월 소득인정액을 다시 확인해 주세요.');
+
+    const consentGiven = self ? !!v.consentSelf : !!v.consent;
+    const sensitiveOk = self ? !!v.consentSelfSensitive : !!v.consentSensitive;
+    if (!consentGiven) return toast(self ? '정보 저장에 동의해 주세요.' : `${who} 동의를 받은 뒤 체크해 주세요.`);
     const sensitiveGiven = ['yes', 'no'].includes(v.disability) || ['yes', 'no'].includes(v.veteran);
-    if (sensitiveGiven && !v.consentSensitive) return toast('장애·보훈 정보는 별도 동의가 필요해요. 동의를 받지 않았다면 "모름"으로 두세요.');
+    if (sensitiveGiven && !sensitiveOk)
+      return toast(self ? '장애·보훈 정보를 입력하려면 민감정보 동의에 체크해 주세요. 원하지 않으면 "모름"으로 두세요.' : '장애·보훈 정보는 별도 동의가 필요해요. 동의를 받지 않았다면 "모름"으로 두세요.');
 
     const isNew = !elder;
-    const saved = {
+    const prevConsent = elder?.consent && (elder.subject || 'guardian') === subj ? elder.consent : null;
+    const saved = sanitizeElder({
       ...(elder || {}),
       id: elder?.id || store.newId(),
+      subject: subj,
       nickname: v.nickname.trim(),
       birthDate: v.birthDate,
       gender: v.gender || '',
@@ -365,22 +433,22 @@ function renderElderForm(elder) {
       sigungu,
       residenceSince: v.residenceSince || '',
       household: v.household || '',
-      householdSize: v.householdSize ? Number(v.householdSize) : '',
+      householdSize: size,
       basicPension: v.basicPension || 'unknown',
       basicLivelihood: v.basicLivelihood || 'unknown',
       nearPoor: v.nearPoor || 'unknown',
       ltcGrade: v.ltcGrade || 'unknown',
-      incomeMonthly: v.incomeManwon !== '' && v.incomeManwon != null ? Number(v.incomeManwon) * 10000 : '',
+      incomeMonthly: income === '' ? '' : Math.round(income * 10000),
       disability: v.disability || 'unknown',
       veteran: v.veteran || 'unknown',
       consent: {
-        at: elder?.consent?.at || new Date().toISOString(),
-        method: v.consentMethod,
-        sensitive: !!v.consentSensitive,
+        at: prevConsent?.at || new Date().toISOString(),
+        method: self ? 'self' : v.consentMethod,
+        sensitive: sensitiveOk,
       },
       createdAt: elder?.createdAt || new Date().toISOString(),
       updatedAt: new Date().toISOString(),
-    };
+    });
     store.saveElder(saved);
     if (isNew) baseline(saved);
     toast(isNew ? '등록했어요. 받으실 수 있는 복지를 찾았어요.' : '저장했어요.');
@@ -418,34 +486,35 @@ function renderElder(id, tab) {
   app.innerHTML = `
   <section class="elder-top">
     <div>
-      <h1>${esc(elder.nickname)}</h1>
-      <p class="muted">${esc([elder.sido, elder.sigungu].filter(Boolean).join(' '))}${age !== null ? ` · 만 ${age}세` : ''}${elder.household ? ` · ${HOUSEHOLD_LABELS[elder.household]}` : ''}</p>
+      <h1>${esc(elder.nickname)}${isSelf(elder) ? ' <span class="badge">본인</span>' : ''}</h1>
+      <p class="muted">${esc([elder.sido, elder.sigungu].filter(Boolean).join(' '))}${age !== null ? ` · 만 ${age}세` : ''}${elder.household ? ` · ${esc(HOUSEHOLD_LABELS[elder.household])}` : ''}</p>
     </div>
     <div class="top-actions">
-      <button class="btn ghost small" data-action="invite" data-id="${id}">${isCareWorker() ? '공유 링크' : '가족 초대'}</button>
-      <a class="btn ghost small" href="#/elder/${id}/edit">정보 수정</a>
+      <button class="btn ghost small" data-action="invite" data-id="${esc(id)}">${isCareWorker() ? '공유 링크' : isSelf(elder) ? '가족과 함께 보기' : '가족 초대'}</button>
+      <a class="btn ghost small" href="#/elder/${esc(id)}/edit">정보 수정</a>
     </div>
   </section>
   ${
     topMissing.length
-      ? `<div class="notice"><span>${topMissing.map(([f, n]) => `<b>${FIELD_LABELS[f] || f}</b>를 입력하면 ${n}건`).join(', ')}을 더 정확히 판정할 수 있어요. <a href="#/elder/${id}/edit">입력하기</a></span></div>`
+      ? `<div class="notice"><span>${topMissing.map(([f, n]) => `<b>${FIELD_LABELS[f] || f}</b>를 입력하면 ${n}건`).join(', ')}을 더 정확히 판정할 수 있어요. <a href="#/elder/${esc(id)}/edit">입력하기</a></span></div>`
       : ''
   }
   <nav class="tabs" role="tablist">${tabs
-    .map(([k, l, n]) => `<a role="tab" href="#/elder/${id}?tab=${k}" class="${k === tab ? 'on' : ''}" aria-selected="${k === tab}">${l} <span>${n}</span></a>`)
+    .map(([k, l, n]) => `<a role="tab" href="#/elder/${esc(id)}?tab=${k}" class="${k === tab ? 'on' : ''}" aria-selected="${k === tab}">${l} <span>${n}</span></a>`)
     .join('')}</nav>
   <div class="list-tools">
     <input type="search" id="q" placeholder="복지 이름으로 찾기" value="${esc(listState.q)}" aria-label="복지 검색">
-    ${tab === 'new' && c.new.length ? `<button class="btn small" data-action="seen-all" data-id="${id}">모두 확인함</button>` : ''}
+    ${tab === 'new' && c.new.length ? `<button class="btn small" data-action="seen-all" data-id="${esc(id)}">모두 확인함</button>` : ''}
   </div>
   <div id="svc-list"></div>`;
 
+  const ctx = { actions: store.getActions(elder.id), seen: store.getSeen(elder.id) };
   const drawList = () => {
     const q = listState.q.trim();
     const items = c[tab].filter((r) => !q || r.service.name.includes(q) || (r.service.easy || '').includes(q));
     const shown = items.slice(0, listState.limit);
     $('#svc-list').innerHTML = items.length
-      ? shown.map((r) => serviceCard(elder, r)).join('') +
+      ? shown.map((r) => serviceCard(elder, r, ctx)).join('') +
         (items.length > shown.length ? `<button class="btn ghost wide" data-action="more">더 보기 (${items.length - shown.length}건 남음)</button>` : '')
       : `<p class="empty">${emptyText(tab)}</p>`;
   };
@@ -476,21 +545,23 @@ function contactHtml(c) {
   return m ? `${esc(text.replace(m[0], ''))} <a href="tel:${m[0].replace(/-/g, '')}">${esc(m[0])}</a>` : esc(text);
 }
 
-function serviceCard(elder, r) {
+function serviceCard(elder, r, ctx) {
   const s = r.service;
-  const action = store.getActions(elder.id)[s.id]?.status;
-  const isNew = !store.getSeen(elder.id).has(s.id);
+  const action = ctx.actions[s.id]?.status;
+  const isNew = !ctx.seen.has(s.id);
+  const link = safeUrl(s.link);
+  const forms = (s.forms || []).map((f) => ({ name: f.name, url: safeUrl(f.url) })).filter((f) => f.url);
   const where = s.src === 'L' ? [s.ctpv, s.sgg].filter(Boolean).join(' ') : '전국';
   const pill = r.status === 'likely' ? '<span class="pill ok">받을 가능성 높음</span>' : '<span class="pill warn">확인 필요</span>';
   const icon = (ok) => (ok === true ? '<i class="ok" aria-label="충족">✓</i>' : ok === false ? '<i class="fail" aria-label="미충족">✕</i>' : '<i class="unk" aria-label="확인 필요">?</i>');
   const careBtns = isCareWorker()
-    ? `<button class="btn small ${action === 'visit' ? 'on' : ''}" data-action="act" data-status="visit" data-id="${s.id}">방문 때 안내</button>
-       <button class="btn small ${action === 'told' ? 'on' : ''}" data-action="act" data-status="told" data-id="${s.id}">안내함</button>`
+    ? `<button class="btn small ${action === 'visit' ? 'on' : ''}" data-action="act" data-status="visit" data-id="${esc(s.id)}">방문 때 안내</button>
+       <button class="btn small ${action === 'told' ? 'on' : ''}" data-action="act" data-status="told" data-id="${esc(s.id)}">안내함</button>`
     : '';
   return `<article class="svc ${r.status}">
     <details>
       <summary>
-        <div class="svc-head">${pill}${isNew ? '<span class="badge new">새</span>' : ''}${action ? `<span class="badge">${ACTION_LABELS[action]}</span>` : ''}</div>
+        <div class="svc-head">${pill}${isNew ? '<span class="badge new">새</span>' : ''}${action ? `<span class="badge">${esc(ACTION_LABELS[action])}</span>` : ''}</div>
         <h3>${esc(s.name)}</h3>
         <p class="easy">${esc(s.easy)}</p>
         <p class="meta">${esc(where)} · ${esc(s.org)}${s.cycle ? ` · ${esc(s.cycle)}` : ''}</p>
@@ -498,11 +569,11 @@ function serviceCard(elder, r) {
       <div class="svc-body">
         <h4>왜 이렇게 판단했나요</h4>
         <ul class="checks">${r.checks.map((c) => `<li>${icon(c.ok)}<span><b>${esc(c.label)}</b> ${esc(c.detail || '')}</span></li>`).join('')}</ul>
-        ${r.missing.length ? `<p class="hint">${r.missing.map((m) => FIELD_LABELS[m] || m).join(', ')}를 입력하면 더 정확해져요.</p>` : ''}
+        ${r.missing.length ? `<p class="hint">${esc(r.missing.map((m) => FIELD_LABELS[m] || m).join(', '))}를 입력하면 더 정확해져요.</p>` : ''}
         ${s.benefit ? `<h4>지원 내용</h4><p>${nl2br(s.benefit)}</p>` : ''}
         ${s.apply ? `<h4>신청 방법</h4><p>${nl2br(s.apply)}</p>` : ''}
         ${s.contacts?.length ? `<h4>문의</h4><ul class="plain">${s.contacts.map((c) => `<li>${contactHtml(c)}</li>`).join('')}</ul>` : ''}
-        ${s.forms?.length ? `<h4>서식</h4><ul class="plain">${s.forms.map((f) => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.name)}</a></li>`).join('')}</ul>` : ''}
+        ${forms.length ? `<h4>서식</h4><ul class="plain">${forms.map((f) => `<li><a href="${esc(f.url)}" target="_blank" rel="noopener noreferrer">${esc(f.name || '서식 내려받기')}</a></li>`).join('')}</ul>` : ''}
         ${s.targetText ? `<details class="raw"><summary>지원대상 원문 보기</summary><p>${nl2br(s.targetText)}</p>${s.rules?.evidence ? `<p class="muted">판정 근거: “${esc(s.rules.evidence)}”</p>` : ''}</details>` : ''}
         <p class="ai-note">${
           s.by === 'gemini'
@@ -510,12 +581,12 @@ function serviceCard(elder, r) {
             : '간이 자동 분석 결과라 정확도가 낮을 수 있어요. 담당 기관에 꼭 확인해 주세요.'
         }</p>
         <div class="svc-actions">
-          ${s.link ? `<a class="btn small ghost" href="${esc(s.link)}" target="_blank" rel="noopener">복지로에서 보기</a>` : ''}
-          <button class="btn small ghost" data-action="share" data-id="${s.id}">${isCareWorker() ? '보호자에게 공유' : '가족에게 공유'}</button>
+          ${link ? `<a class="btn small ghost" href="${esc(link)}" target="_blank" rel="noopener noreferrer">복지로에서 보기</a>` : ''}
+          <button class="btn small ghost" data-action="share" data-id="${esc(s.id)}">${isCareWorker() ? '보호자에게 공유' : isSelf(elder) ? '자녀에게 도움 요청' : '가족에게 공유'}</button>
           ${careBtns}
-          <button class="btn small ${action === 'applied' ? 'on' : ''}" data-action="act" data-status="applied" data-id="${s.id}">신청 완료</button>
-          <button class="btn small ${action === 'notEligible' ? 'on' : ''}" data-action="act" data-status="notEligible" data-id="${s.id}">해당 없음</button>
-          <button class="btn small ${action === 'rejected' ? 'on' : ''}" data-action="act" data-status="rejected" data-id="${s.id}">탈락</button>
+          <button class="btn small ${action === 'applied' ? 'on' : ''}" data-action="act" data-status="applied" data-id="${esc(s.id)}">신청 완료</button>
+          <button class="btn small ${action === 'notEligible' ? 'on' : ''}" data-action="act" data-status="notEligible" data-id="${esc(s.id)}">해당 없음</button>
+          <button class="btn small ${action === 'rejected' ? 'on' : ''}" data-action="act" data-status="rejected" data-id="${esc(s.id)}">탈락</button>
         </div>
       </div>
     </details>
@@ -533,11 +604,11 @@ function renderVisits() {
     groups.length
       ? groups
           .map(
-            (g) => `<section class="panel visit-group"><h2><a href="#/elder/${g.e.id}?tab=visit">${esc(g.e.nickname)}</a> <span class="muted">${esc(g.e.sigungu || g.e.sido)}</span></h2>
+            (g) => `<section class="panel visit-group"><h2><a href="#/elder/${esc(g.e.id)}?tab=visit">${esc(g.e.nickname)}</a> <span class="muted">${esc(g.e.sigungu || g.e.sido)}</span></h2>
       <ul class="visit-list">${g.items
         .map(
           (r) => `<li><div><b>${esc(r.service.name)}</b><p class="muted">${esc(r.service.easy)}</p></div>
-        <button class="btn small" data-action="told" data-elder="${g.e.id}" data-id="${r.service.id}">안내함</button></li>`,
+        <button class="btn small" data-action="told" data-elder="${esc(g.e.id)}" data-id="${esc(r.service.id)}">안내함</button></li>`,
         )
         .join('')}</ul></section>`,
           )
@@ -555,7 +626,7 @@ function renderSettings() {
     <h2>설정</h2>
     <fieldset><legend>나의 정보</legend>
       <label class="field">역할 <select name="role">${options(Object.entries(ROLE).map(([k, v]) => [k, v.label]), s.role, '선택')}</select></label>
-      <label class="field">내 이름 <small>(동의 요청 문자에 들어가요 · 선택)</small><input name="name" maxlength="20" value="${esc(s.name)}"></label>
+      <label class="field">내 이름 <small>(보호자가 보내는 동의 요청 문자에 들어가요 · 선택)</small><input name="name" maxlength="20" value="${esc(s.name)}"></label>
       <label class="field">소속 기관 <small>(생활지원사·요양보호사 · 선택)</small><input name="org" maxlength="40" value="${esc(s.org)}" placeholder="예: ○○노인복지센터"></label>
     </fieldset>
     <fieldset><legend>보기</legend>
@@ -596,6 +667,7 @@ function renderSettings() {
   f.addEventListener('submit', async (ev) => {
     ev.preventDefault();
     const v = Object.fromEntries(new FormData(f));
+    if (!ROLE[v.role]) return toast('역할을 선택해 주세요.');
     const notify = !!v.notify;
     if (notify && 'Notification' in window && Notification.permission !== 'granted') {
       const p = await Notification.requestPermission();
@@ -609,11 +681,15 @@ function renderSettings() {
   });
   $('#import-file').addEventListener('change', async (ev) => {
     const file = ev.target.files[0];
+    ev.target.value = '';
     if (!file) return;
+    if (file.size > 5 * 1024 * 1024) return toast('백업 파일이 너무 커요. (최대 5MB)');
+    if (!confirm('지금 이 기기에 있는 정보가 백업 파일 내용으로 바뀌어요. 계속할까요?')) return;
     try {
-      store.importAll(await file.text());
-      toast('불러왔어요.');
+      const n = store.importAll(await file.text());
+      toast(`불러왔어요. (${n}명)`);
       location.hash = '#/';
+      route();
     } catch (e) {
       toast(e.message);
     }
@@ -626,10 +702,10 @@ function renderAbout() {
   <ul>
     <li><b>저장 위치</b>: 입력한 어르신 정보는 이 기기의 브라우저 안에만 저장되며, 서버로 전송되지 않습니다.</li>
     <li><b>판정 방식</b>: 공개된 복지사업 데이터를 기기로 내려받아, 기기 안에서 어르신 정보와 비교합니다.</li>
-    <li><b>동의</b>: 어르신(또는 법정대리인)의 동의를 받은 경우에만 등록하세요. 장애·보훈 정보는 별도 동의가 필요합니다.</li>
+    <li><b>동의</b>: 어르신 본인이 직접 등록할 때는 본인 동의를, 보호자가 대신 등록할 때는 어르신(또는 법정대리인)의 동의를 받은 경우에만 등록하세요. 장애·보훈 정보는 별도 동의가 필요합니다.</li>
     <li><b>최소 수집</b>: 주민등록번호, 연락처, 정확한 주소는 받지 않습니다.</li>
     <li><b>삭제</b>: 어르신 정보 수정 화면의 '삭제' 또는 설정의 '모든 정보 삭제'로 언제든 지울 수 있습니다.</li>
-    <li><b>공유 링크</b>: 가족 초대·공유 링크에는 어르신 정보가 담깁니다. 믿을 수 있는 가족·보호자에게만 보내세요.</li>
+    <li><b>공유 링크</b>: 가족 초대·공유 링크에는 어르신 정보(생년월일·지역·수급 여부 등)가 담깁니다. 장애·보훈 같은 민감정보는 링크에 넣지 않습니다. 믿을 수 있는 가족·보호자에게만 보내세요.</li>
     <li><b>판정의 한계</b>: 이 앱의 결과는 안내용입니다. 실제 자격은 신청 기관의 심사로 결정됩니다.</li>
   </ul>
   <a class="btn ghost" href="#/">돌아가기</a></section>`;
@@ -648,18 +724,25 @@ const b64url = {
     return new TextDecoder().decode(Uint8Array.from(bin, (c) => c.charCodeAt(0)));
   },
 };
-const SHARE_FIELDS = ['nickname', 'birthDate', 'gender', 'sido', 'sigungu', 'residenceSince', 'household', 'householdSize', 'basicPension', 'basicLivelihood', 'nearPoor', 'ltcGrade', 'incomeMonthly', 'disability', 'veteran', 'consent'];
+// 민감정보(장애·보훈)는 링크에 넣지 않음: 링크는 메신저 서버를 거쳐 가고 기록이 남을 수 있음
+const SHARE_FIELDS = ['subject', 'nickname', 'birthDate', 'gender', 'sido', 'sigungu', 'residenceSince', 'household', 'householdSize', 'basicPension', 'basicLivelihood', 'nearPoor', 'ltcGrade', 'incomeMonthly', 'consent'];
 
 function inviteLink(elder) {
   const data = Object.fromEntries(SHARE_FIELDS.map((k) => [k, elder[k]]));
+  if (data.consent) data.consent = { ...data.consent, sensitive: false };
   return `${location.origin}${location.pathname}#/import/${b64url.enc(JSON.stringify({ v: 1, elder: data }))}`;
 }
 
 function renderImport(code) {
-  let elder;
+  let elder, fromSelf;
   try {
-    elder = JSON.parse(b64url.dec(code)).elder;
-    if (!elder?.nickname) throw new Error();
+    if (code.length > 4000) throw new Error();
+    const raw = JSON.parse(b64url.dec(code)).elder;
+    elder = sanitizeElder(raw, { keepId: false });
+    if (!elder) throw new Error();
+    // 받는 쪽은 어르신 본인이 아니므로 '보호자 등록'으로 바꿔 저장
+    fromSelf = elder.subject === 'self';
+    elder = dropUnconsentedSensitive({ ...elder, subject: 'guardian', disability: 'unknown', veteran: 'unknown' });
   } catch {
     app.innerHTML = '<section class="panel"><h2>초대 링크가 올바르지 않아요</h2><a class="btn" href="#/">홈으로</a></section>';
     return;
@@ -668,12 +751,13 @@ function renderImport(code) {
   app.innerHTML = `<section class="panel">
     <h2>${esc(elder.nickname)} 정보를 받았어요</h2>
     <p>${esc([elder.sido, elder.sigungu].filter(Boolean).join(' '))} · ${esc(elder.birthDate || '')}</p>
-    <p class="muted">가져오면 이 기기에서도 같은 복지 알림을 받을 수 있어요.</p>
-    ${!s.settings.role ? `<label class="field">나의 역할 <select id="imp-role">${options(Object.entries(ROLE).map(([k, v]) => [k, v.label]), 'family')}</select></label>` : ''}
+    ${fromSelf ? '<p>어르신께서 직접 등록하신 정보예요. 이름은 가져온 뒤 \'정보 수정\'에서 바꿀 수 있어요.</p>' : ''}
+    <p class="muted">가져오면 이 기기에서도 같은 복지 알림을 받을 수 있어요. 장애·보훈 정보는 링크로 전달되지 않으니 필요하면 직접 입력해 주세요.</p>
+    ${!s.settings.role ? `<label class="field">나의 역할 <select id="imp-role">${options(Object.entries(ROLE).filter(([k]) => k !== 'self').map(([k, v]) => [k, v.label]), 'family')}</select></label>` : ''}
     <div class="form-actions left"><button class="btn primary" id="do-import">가져오기</button><a class="btn ghost" href="#/">취소</a></div>
   </section>`;
   $('#do-import').addEventListener('click', () => {
-    if (!s.settings.role) store.updateSettings({ role: $('#imp-role').value });
+    if (!s.settings.role) store.updateSettings({ role: ROLE[$('#imp-role').value] ? $('#imp-role').value : 'family' });
     const saved = { ...elder, id: store.newId(), createdAt: new Date().toISOString(), importedAt: new Date().toISOString() };
     store.saveElder(saved);
     baseline(saved);
@@ -693,8 +777,13 @@ async function shareText(title, text, url) {
       if (e.name === 'AbortError') return;
     }
   }
-  await navigator.clipboard?.writeText([text, url].filter(Boolean).join('\n'));
-  toast('복사했어요. 카카오톡이나 문자에 붙여 넣어 보내세요.');
+  try {
+    if (!navigator.clipboard) throw new Error();
+    await navigator.clipboard.writeText([text, url].filter(Boolean).join('\n'));
+    toast('복사했어요. 카카오톡이나 문자에 붙여 넣어 보내세요.');
+  } catch {
+    toast('이 브라우저에서는 공유·복사를 할 수 없어요.');
+  }
 }
 
 /* ---------------- 이벤트 ---------------- */
@@ -705,7 +794,10 @@ document.addEventListener('click', async (ev) => {
   const { parts, query } = parseHash();
   const elderId = parts[0] === 'elder' ? parts[1] : el.dataset.elder;
 
-  if (action === 'act') {
+  if (action === 'reload') {
+    location.reload();
+  } else if (action === 'act') {
+    if (!store.getElder(elderId)) return;
     const cur = store.getActions(elderId)[id]?.status;
     store.setAction(elderId, id, cur === el.dataset.status ? null : el.dataset.status);
     store.markSeen(elderId, [id]);
@@ -721,6 +813,7 @@ document.addEventListener('click', async (ev) => {
     renderVisits();
     toast('안내함으로 표시했어요.');
   } else if (action === 'seen-all') {
+    if (!store.getElder(id)) return;
     const c = categorize(store.getElder(id));
     store.markSeen(id, c.new.map((r) => r.service.id));
     location.hash = `#/elder/${id}?tab=likely`;
@@ -733,12 +826,17 @@ document.addEventListener('click', async (ev) => {
     if (!elder || !s) return;
     const where = s.src === 'L' ? [s.ctpv, s.sgg].filter(Boolean).join(' ') : '전국';
     const apply = (s.apply || '').split('\n')[0];
-    const text = `[효도알림] ${elder.nickname}께 해당될 수 있는 복지예요.\n· ${s.name} (${where})\n· ${s.easy}${apply ? `\n· 신청: ${apply}` : ''}`;
-    shareText(s.name, text, s.link);
+    const head = isSelf(elder) ? '제가 받을 수 있을 것 같은 복지예요. 신청을 도와주세요.' : `${elder.nickname}께 해당될 수 있는 복지예요.`;
+    const text = `[효도알림] ${head}\n· ${s.name} (${where})\n· ${s.easy}${apply ? `\n· 신청: ${apply}` : ''}`;
+    shareText(s.name, text, safeUrl(s.link));
   } else if (action === 'invite') {
     const elder = store.getElder(id);
-    if (!confirm('이 링크에는 어르신 정보(생년월일·지역 등)가 담겨요. 믿을 수 있는 가족·보호자에게만 보내세요. 계속할까요?')) return;
-    shareText(`${elder.nickname} 복지 알림 함께 받기`, `[효도알림] ${elder.nickname} 복지 알림을 함께 받아요. 링크를 눌러 등록하세요.`, inviteLink(elder));
+    if (!elder) return;
+    if (!confirm('이 링크에는 어르신 정보(생년월일·지역·수급 여부 등)가 담겨요. 장애·보훈 정보는 빠집니다. 믿을 수 있는 가족·보호자에게만 보내세요. 계속할까요?')) return;
+    const msg = isSelf(elder)
+      ? `[효도알림] 제가 받을 수 있는 복지 알림을 함께 받아 주세요. 링크를 누르면 제 정보가 등록돼요.`
+      : `[효도알림] ${elder.nickname} 복지 알림을 함께 받아요. 링크를 눌러 등록하세요.`;
+    shareText(isSelf(elder) ? '복지 알림 함께 받기' : `${elder.nickname} 복지 알림 함께 받기`, msg, inviteLink(elder));
   } else if (action === 'delete-elder') {
     if (!confirm('이 어르신의 정보와 기록을 모두 삭제할까요? 되돌릴 수 없어요.')) return;
     store.deleteElder(id);
@@ -748,13 +846,14 @@ document.addEventListener('click', async (ev) => {
     const blob = new Blob([store.exportAll()], { type: 'application/json' });
     const a = Object.assign(document.createElement('a'), { href: URL.createObjectURL(blob), download: `hyodo-backup-${todayStr()}.json` });
     a.click();
-    URL.revokeObjectURL(a.href);
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
   } else if (action === 'clear') {
     if (!confirm('이 기기에 저장된 모든 정보를 삭제할까요? 되돌릴 수 없어요.')) return;
     store.clearAll();
     location.hash = '#/';
     route();
   } else if (action === 'enable-notify') {
+    if (!('Notification' in window)) return;
     const p = await Notification.requestPermission();
     if (p === 'granted') {
       store.updateSettings({ notify: true });

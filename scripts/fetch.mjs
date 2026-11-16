@@ -5,6 +5,13 @@ import { config, CACHE_DIR } from './config.mjs';
 import { DataGoClient } from './lib/datago.mjs';
 import { readJson, writeJson, today } from './lib/store.mjs';
 
+const decodeURIComponentSafe = (s) => {
+  try {
+    return decodeURIComponent(s);
+  } catch {
+    return s;
+  }
+};
 const daysBetween = (a, b) => Math.round((Date.parse(b) - Date.parse(a)) / 864e5);
 
 async function syncKind(client, kind, cap) {
@@ -59,6 +66,12 @@ async function main() {
   if (!config.dataGoKrKey) {
     console.warn('DATA_GO_KR_KEY가 설정되지 않아 수집을 건너뜁니다. (기존 캐시로 계속 진행)');
     return;
+  }
+  // GitHub Actions는 등록한 비밀값 그대로만 가려 주므로, URL 인코딩된 형태도 로그에서 가리도록 등록
+  if (process.env.GITHUB_ACTIONS) {
+    for (const v of new Set([config.dataGoKrKey, encodeURIComponent(config.dataGoKrKey), decodeURIComponentSafe(config.dataGoKrKey)])) {
+      if (v) console.log(`::add-mask::${v}`);
+    }
   }
   const client = new DataGoClient(config.dataGoKrKey);
   const results = [];

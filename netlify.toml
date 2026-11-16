@@ -4,6 +4,16 @@
   publish = "docs"
   command = ""
 
+# 보안 헤더 (모든 경로)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-ancestors 'none'"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+
 # 서비스 워커와 데이터는 항상 최신본을 받도록 캐시하지 않습니다.
 [[headers]]
   for = "/sw.js"
